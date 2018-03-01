@@ -1,0 +1,43 @@
+
+
+
+entity  Unidad{
+	nunidad String
+    ubicacion String
+}
+
+entity  Especialidad{
+    nespecialidad String
+}
+entity Genero{
+    ngenero String
+}
+entity Departamento{
+	ndepartamento String   
+}
+entity Grado {
+	ngrado String
+}
+entity  Alumno{
+    nombre String
+    apellido1 String
+    apellido2 String
+    matricula Integer
+}
+entity  Investigador{
+	nombre String
+    apellido1 String
+    apellido2 String
+    esexterno Boolean
+}
+
+
+relationship ManyToOne {
+ 	Alumno{departamento} to Departamento
+    Alumno{genero(ngenero)} to Genero
+    Investigador{genero(ngenero)} to Genero
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
