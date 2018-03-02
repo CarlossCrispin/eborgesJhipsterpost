@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "genero",
+            "otherEntityName": "genero",
+            "otherEntityField": "ngenero"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "grado",
+            "otherEntityName": "grado",
+            "otherEntityField": "ngrado"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "departamento",
+            "otherEntityName": "departamento",
+            "otherEntityField": "ndepartamento"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellido1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellido2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "esexterno",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180301235743",
+    "entityTableName": "investigador",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

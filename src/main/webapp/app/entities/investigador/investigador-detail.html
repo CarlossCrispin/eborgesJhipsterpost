@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="eBorgesApp.investigador.detail.title">Investigador</span> {{vm.investigador.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eBorgesApp.investigador.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.investigador.nombre}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.apellido1">Apellido 1</span></dt>
+        <dd>
+            <span>{{vm.investigador.apellido1}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.apellido2">Apellido 2</span></dt>
+        <dd>
+            <span>{{vm.investigador.apellido2}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.esexterno">Esexterno</span></dt>
+        <dd>
+            <span>{{vm.investigador.esexterno}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.genero">Genero</span></dt>
+        <dd>
+            <a ui-sref="genero-detail({id:vm.investigador.genero.id})">{{vm.investigador.genero.ngenero}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.grado">Grado</span></dt>
+        <dd>
+            <a ui-sref="grado-detail({id:vm.investigador.grado.id})">{{vm.investigador.grado.ngrado}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.investigador.departamento">Departamento</span></dt>
+        <dd>
+            <a ui-sref="departamento-detail({id:vm.investigador.departamento.id})">{{vm.investigador.departamento.ndepartamento}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="investigador-detail.edit({id:vm.investigador.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

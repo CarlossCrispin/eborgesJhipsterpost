@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myActaLabel" data-translate="eBorgesApp.acta.home.createOrEditLabel">Create or edit a Acta</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.acta.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.acta.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eBorgesApp.acta.folio" for="field_folio">Folio</label>
+            <input type="number" class="form-control" name="folio" id="field_folio"
+                    ng-model="vm.acta.folio"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eBorgesApp.acta.fechatomagrado" for="field_fechatomagrado">Fechatomagrado</label>
+                <div class="input-group">
+                    <input id="field_fechatomagrado" type="text" class="form-control" name="fechatomagrado" datetime-picker="{{dateformat}}" ng-model="vm.acta.fechatomagrado" is-open="vm.datePickerOpenStatus.fechatomagrado"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechatomagrado')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="eBorgesApp.acta.tesis" for="field_tesis">Tesis</label>
+            <select class="form-control" id="field_tesis" name="tesis" ng-model="vm.acta.tesis" ng-options="tesis as tesis.id for tesis in vm.teses track by tesis.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="eBorgesApp.acta.alumno" for="field_alumno">Alumno</label>
+            <select class="form-control" id="field_alumno" name="alumno" ng-model="vm.acta.alumno" ng-options="alumno as alumno.id for alumno in vm.alumnos track by alumno.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="eBorgesApp.acta.unidad" for="field_unidad">Unidad</label>
+            <select class="form-control" id="field_unidad" name="unidad" ng-model="vm.acta.unidad" ng-options="unidad as unidad.nunidad for unidad in vm.unidads track by unidad.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+{
+    "eBorgesApp": {
+        "especialidad" : {
+            "home": {
+                "title": "Especialidads",
+                "createLabel": "Crear nuevo Especialidad",
+                "createOrEditLabel": "Crear o editar Especialidad",
+                "search": "Search for Especialidad"
+            },
+            "created": "Un nuevo Especialidad ha sido creado con el identificador {{ param }}",
+            "updated": "Un Especialidad ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Especialidad ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Especialidad {{ id }}?"
+            },
+            "detail": {
+                "title": "Especialidad"
+            },
+            "nespecialidad": "Nespecialidad"
+        }
+    }
+}

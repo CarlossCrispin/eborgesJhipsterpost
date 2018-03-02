@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySinodalLabel" data-translate="eBorgesApp.sinodal.home.createOrEditLabel">Create or edit a Sinodal</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.sinodal.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.sinodal.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="eBorgesApp.sinodal.acta" for="field_acta">Acta</label>
+            <select class="form-control" id="field_acta" name="acta" ng-model="vm.sinodal.acta" ng-options="acta as acta.id for acta in vm.actas track by acta.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="eBorgesApp.sinodal.tipoasesor" for="field_tipoasesor">Tipoasesor</label>
+            <select class="form-control" id="field_tipoasesor" name="tipoasesor" ng-model="vm.sinodal.tipoasesor" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="eBorgesApp.sinodal.investigador" for="field_investigador">Investigador</label>
+            <select class="form-control" id="field_investigador" name="investigador" ng-model="vm.sinodal.investigador" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

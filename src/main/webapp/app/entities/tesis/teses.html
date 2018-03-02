@@ -1,0 +1,101 @@
+<div>
+    <h2 data-translate="eBorgesApp.tesis.home.title">Teses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tesis.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="eBorgesApp.tesis.home.createLabel">
+                        Create new Tesis
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'eBorgesApp.tesis.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.titulodetesis">Titulodetesis</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.fechadepublicacion">Fechadepublicacion</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.resumen">Resumen</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.clasificacion">Clasificacion</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.clasificacion1">Clasificacion 1</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.anio">Anio</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.mes">Mes</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.alumno">Alumno</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.grado">Grado</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.departamento">Departamento</span></th>
+                    <th><span data-translate="eBorgesApp.tesis.unidad">Unidad</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tesis in vm.teses track by tesis.id">
+                    <td><a ui-sref="tesis-detail({id:tesis.id})">{{tesis.id}}</a></td>
+                    <td>{{tesis.titulodetesis}}</td>
+                    <td>{{tesis.fechadepublicacion | date:'medium'}}</td>
+                    <td>{{tesis.resumen}}</td>
+                    <td>{{tesis.clasificacion}}</td>
+                    <td>{{tesis.clasificacion1}}</td>
+                    <td>{{tesis.anio}}</td>
+                    <td>{{tesis.mes}}</td>
+                    <td>
+                        <a ui-sref="alumno-detail({id:tesis.alumno.id})">{{tesis.alumno.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="grado-detail({id:tesis.grado.id})">{{tesis.grado.ngrado}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="departamento-detail({id:tesis.departamento.id})">{{tesis.departamento.ndepartamento}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="unidad-detail({id:tesis.unidad.id})">{{tesis.unidad.nunidad}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tesis-detail({id:tesis.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tesis.edit({id:tesis.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tesis.delete({id:tesis.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

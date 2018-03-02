@@ -1,0 +1,16 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "ntipo",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180302003903",
+    "entityTableName": "tipo_asesor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

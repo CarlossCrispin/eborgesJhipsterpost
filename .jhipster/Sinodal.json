@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "acta",
+            "otherEntityName": "acta",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20180302003859",
+    "entityTableName": "sinodal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

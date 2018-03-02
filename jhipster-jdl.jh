@@ -5,7 +5,13 @@ entity  Unidad{
 	nunidad String
     ubicacion String
 }
-
+entity Acta{
+    folio Long
+    fechatomagrado Instant
+}
+entity  Sinodal{
+   
+}
 entity  Especialidad{
     nespecialidad String
 }
@@ -14,6 +20,12 @@ entity Genero{
 }
 entity Departamento{
 	ndepartamento String   
+}
+entity  TipoAsesor{
+    ntipo Integer
+}
+entity  Especialidad{
+    nespecialidad String
 }
 entity Grado {
 	ngrado String
@@ -30,14 +42,46 @@ entity  Investigador{
     apellido2 String
     esexterno Boolean
 }
-
-
+entity  Tesis{
+    titulodetesis String,
+    fechadepublicacion Instant,
+    resumen String,
+    clasificacion String,
+    clasificacion1 String,
+    anio Long,
+    mes Long
+}
+entity  TesisDirector{
+	
+}
 relationship ManyToOne {
- 	Alumno{departamento} to Departamento
+	Acta{tesis} to Tesis
+    Acta{alumno} to Alumno
+    Acta{unidad(nunidad)} to Unidad
+    Sinodal{acta} to Acta
+    Sinodal{tipoasesor(ntipo)} to TipoAsesor
+    Sinodal{investigador} to Investigador
+    Departamento{especialidad(nespecialidad)} to Especialidad
+    
+ 	Alumno{departamento(ndepartamento)} to Departamento
+    Alumno{grado(ngrado)} to Grado
     Alumno{genero(ngenero)} to Genero
     Investigador{genero(ngenero)} to Genero
+    Investigador{grado(ngrado)} to Grado
+    Investigador{departamento(ndepartamento)} to Departamento
+    
+    Tesis{alumno} to Alumno
+    Tesis{grado(ngrado)} to Grado
+    Tesis{departamento(ndepartamento)} to Departamento
+    Tesis{unidad(nunidad)} to Unidad
+    
+    TesisDirector{tesis} to Tesis
+    TesisDirector{investigador(nombre)} to Investigador
+    TesisDirector{tipoasesor(ntipo)} to TipoAsesor
+    
 }
 
 enum Language {
+
     FRENCH, ENGLISH, SPANISH
 }

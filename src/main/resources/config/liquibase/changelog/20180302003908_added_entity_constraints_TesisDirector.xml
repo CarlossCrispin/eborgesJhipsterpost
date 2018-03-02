@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity TesisDirector.
+    -->
+    <changeSet id="20180302003908-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tesis_id"
+                                 baseTableName="tesis_director"
+                                 constraintName="fk_tesis_director_tesis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tesis"/>
+
+        <addForeignKeyConstraint baseColumnNames="investigador_id"
+                                 baseTableName="tesis_director"
+                                 constraintName="fk_tesis_director_investigador_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor_id"
+                                 baseTableName="tesis_director"
+                                 constraintName="fk_tesis_director_tipoasesor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
+    </changeSet>
+</databaseChangeLog>

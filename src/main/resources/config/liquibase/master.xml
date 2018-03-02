@@ -5,6 +5,25 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235737_added_entity_Unidad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235738_added_entity_Especialidad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235739_added_entity_Genero.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235740_added_entity_Departamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235741_added_entity_Grado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235742_added_entity_Alumno.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235743_added_entity_Investigador.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003858_added_entity_Acta.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003859_added_entity_Sinodal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003903_added_entity_TipoAsesor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003907_added_entity_Tesis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003908_added_entity_TesisDirector.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20180301235742_added_entity_constraints_Alumno.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235743_added_entity_constraints_Investigador.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180301235740_added_entity_constraints_Departamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003858_added_entity_constraints_Acta.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003859_added_entity_constraints_Sinodal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003907_added_entity_constraints_Tesis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180302003908_added_entity_constraints_TesisDirector.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

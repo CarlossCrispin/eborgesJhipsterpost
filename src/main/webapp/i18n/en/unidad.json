@@ -1,0 +1,23 @@
+{
+    "eBorgesApp": {
+        "unidad" : {
+            "home": {
+                "title": "Unidads",
+                "createLabel": "Create a new Unidad",
+                "createOrEditLabel": "Create or edit a Unidad",
+                "search": "Search for Unidad"
+            },
+            "created": "A new Unidad is created with identifier {{ param }}",
+            "updated": "A Unidad is updated with identifier {{ param }}",
+            "deleted": "A Unidad is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Unidad {{ id }}?"
+            },
+            "detail": {
+                "title": "Unidad"
+            },
+            "nunidad": "Nunidad",
+            "ubicacion": "Ubicacion"
+        }
+    }
+}

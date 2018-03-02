@@ -1,0 +1,28 @@
+{
+    "eBorgesApp": {
+        "alumno" : {
+            "home": {
+                "title": "Alumnos",
+                "createLabel": "Crear nuevo Alumno",
+                "createOrEditLabel": "Crear o editar Alumno",
+                "search": "Search for Alumno"
+            },
+            "created": "Un nuevo Alumno ha sido creado con el identificador {{ param }}",
+            "updated": "Un Alumno ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Alumno ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Alumno {{ id }}?"
+            },
+            "detail": {
+                "title": "Alumno"
+            },
+            "nombre": "Nombre",
+            "apellido1": "Apellido 1",
+            "apellido2": "Apellido 2",
+            "matricula": "Matricula",
+            "departamento": "Departamento",
+            "grado": "Grado",
+            "genero": "Genero"
+        }
+    }
+}

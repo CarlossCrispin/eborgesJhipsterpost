@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="eBorgesApp.sinodal.detail.title">Sinodal</span> {{vm.sinodal.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eBorgesApp.sinodal.acta">Acta</span></dt>
+        <dd>
+            <a ui-sref="acta-detail({id:vm.sinodal.acta.id})">{{vm.sinodal.acta.id}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.sinodal.tipoasesor">Tipoasesor</span></dt>
+        <dd>
+            <a ui-sref="tipo-asesor-detail({id:vm.sinodal.tipoasesor.id})">{{vm.sinodal.tipoasesor.ntipo}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.sinodal.investigador">Investigador</span></dt>
+        <dd>
+            <a ui-sref="investigador-detail({id:vm.sinodal.investigador.id})">{{vm.sinodal.investigador.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="sinodal-detail.edit({id:vm.sinodal.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

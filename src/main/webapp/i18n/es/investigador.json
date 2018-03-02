@@ -1,0 +1,28 @@
+{
+    "eBorgesApp": {
+        "investigador" : {
+            "home": {
+                "title": "Investigadors",
+                "createLabel": "Crear nuevo Investigador",
+                "createOrEditLabel": "Crear o editar Investigador",
+                "search": "Search for Investigador"
+            },
+            "created": "Un nuevo Investigador ha sido creado con el identificador {{ param }}",
+            "updated": "Un Investigador ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Investigador ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Investigador {{ id }}?"
+            },
+            "detail": {
+                "title": "Investigador"
+            },
+            "nombre": "Nombre",
+            "apellido1": "Apellido 1",
+            "apellido2": "Apellido 2",
+            "esexterno": "Esexterno",
+            "genero": "Genero",
+            "grado": "Grado",
+            "departamento": "Departamento"
+        }
+    }
+}

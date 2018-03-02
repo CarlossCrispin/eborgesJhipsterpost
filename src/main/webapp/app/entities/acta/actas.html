@@ -1,0 +1,87 @@
+<div>
+    <h2 data-translate="eBorgesApp.acta.home.title">Actas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="acta.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="eBorgesApp.acta.home.createLabel">
+                        Create new Acta
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'eBorgesApp.acta.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="eBorgesApp.acta.folio">Folio</span></th>
+                    <th><span data-translate="eBorgesApp.acta.fechatomagrado">Fechatomagrado</span></th>
+                    <th><span data-translate="eBorgesApp.acta.tesis">Tesis</span></th>
+                    <th><span data-translate="eBorgesApp.acta.alumno">Alumno</span></th>
+                    <th><span data-translate="eBorgesApp.acta.unidad">Unidad</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="acta in vm.actas track by acta.id">
+                    <td><a ui-sref="acta-detail({id:acta.id})">{{acta.id}}</a></td>
+                    <td>{{acta.folio}}</td>
+                    <td>{{acta.fechatomagrado | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="tesis-detail({id:acta.tesis.id})">{{acta.tesis.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="alumno-detail({id:acta.alumno.id})">{{acta.alumno.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="unidad-detail({id:acta.unidad.id})">{{acta.unidad.nunidad}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="acta-detail({id:acta.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="acta.edit({id:acta.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="acta.delete({id:acta.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

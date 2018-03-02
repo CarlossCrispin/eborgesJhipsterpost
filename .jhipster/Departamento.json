@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "especialidad",
+            "otherEntityName": "especialidad",
+            "otherEntityField": "nespecialidad"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ndepartamento",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180301235740",
+    "entityTableName": "departamento",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

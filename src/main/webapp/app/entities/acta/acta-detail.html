@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="eBorgesApp.acta.detail.title">Acta</span> {{vm.acta.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eBorgesApp.acta.folio">Folio</span></dt>
+        <dd>
+            <span>{{vm.acta.folio}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.acta.fechatomagrado">Fechatomagrado</span></dt>
+        <dd>
+            <span>{{vm.acta.fechatomagrado | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.acta.tesis">Tesis</span></dt>
+        <dd>
+            <a ui-sref="tesis-detail({id:vm.acta.tesis.id})">{{vm.acta.tesis.id}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.acta.alumno">Alumno</span></dt>
+        <dd>
+            <a ui-sref="alumno-detail({id:vm.acta.alumno.id})">{{vm.acta.alumno.id}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.acta.unidad">Unidad</span></dt>
+        <dd>
+            <a ui-sref="unidad-detail({id:vm.acta.unidad.id})">{{vm.acta.unidad.nunidad}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="acta-detail.edit({id:vm.acta.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

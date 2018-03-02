@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nunidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ubicacion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180301235737",
+    "entityTableName": "unidad",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

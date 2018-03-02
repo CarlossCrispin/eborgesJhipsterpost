@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tesis",
+            "otherEntityName": "tesis",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "alumno",
+            "otherEntityName": "alumno",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "unidad",
+            "otherEntityName": "unidad",
+            "otherEntityField": "nunidad"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "folio",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "fechatomagrado",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180302003858",
+    "entityTableName": "acta",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Acta.
+    -->
+    <changeSet id="20180302003858-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tesis_id"
+                                 baseTableName="acta"
+                                 constraintName="fk_acta_tesis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tesis"/>
+
+        <addForeignKeyConstraint baseColumnNames="alumno_id"
+                                 baseTableName="acta"
+                                 constraintName="fk_acta_alumno_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="alumno"/>
+
+        <addForeignKeyConstraint baseColumnNames="unidad_id"
+                                 baseTableName="acta"
+                                 constraintName="fk_acta_unidad_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidad"/>
+
+    </changeSet>
+</databaseChangeLog>

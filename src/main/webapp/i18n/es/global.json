@@ -7,6 +7,18 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "unidad": "Unidad",
+                "especialidad": "Especialidad",
+                "genero": "Genero",
+                "departamento": "Departamento",
+                "grado": "Grado",
+                "alumno": "Alumno",
+                "investigador": "Investigador",
+                "acta": "Acta",
+                "sinodal": "Sinodal",
+                "tipoAsesor": "Tipo Asesor",
+                "tesis": "Tesis",
+                "tesisDirector": "Tesis Director",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

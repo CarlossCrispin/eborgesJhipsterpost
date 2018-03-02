@@ -1,0 +1,24 @@
+{
+    "eBorgesApp": {
+        "sinodal" : {
+            "home": {
+                "title": "Sinodals",
+                "createLabel": "Create a new Sinodal",
+                "createOrEditLabel": "Create or edit a Sinodal",
+                "search": "Search for Sinodal"
+            },
+            "created": "A new Sinodal is created with identifier {{ param }}",
+            "updated": "A Sinodal is updated with identifier {{ param }}",
+            "deleted": "A Sinodal is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sinodal {{ id }}?"
+            },
+            "detail": {
+                "title": "Sinodal"
+            },
+            "acta": "Acta",
+            "tipoasesor": "Tipoasesor",
+            "investigador": "Investigador"
+        }
+    }
+}

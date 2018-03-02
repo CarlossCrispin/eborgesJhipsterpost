@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tesis",
+            "otherEntityName": "tesis",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador",
+            "otherEntityName": "investigador",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20180302003908",
+    "entityTableName": "tesis_director",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

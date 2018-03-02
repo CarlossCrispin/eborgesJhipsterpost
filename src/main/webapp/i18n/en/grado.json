@@ -1,0 +1,22 @@
+{
+    "eBorgesApp": {
+        "grado" : {
+            "home": {
+                "title": "Grados",
+                "createLabel": "Create a new Grado",
+                "createOrEditLabel": "Create or edit a Grado",
+                "search": "Search for Grado"
+            },
+            "created": "A new Grado is created with identifier {{ param }}",
+            "updated": "A Grado is updated with identifier {{ param }}",
+            "deleted": "A Grado is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Grado {{ id }}?"
+            },
+            "detail": {
+                "title": "Grado"
+            },
+            "ngrado": "Ngrado"
+        }
+    }
+}

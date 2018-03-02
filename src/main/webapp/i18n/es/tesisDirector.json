@@ -1,0 +1,24 @@
+{
+    "eBorgesApp": {
+        "tesisDirector" : {
+            "home": {
+                "title": "Tesis Directors",
+                "createLabel": "Crear nuevo Tesis Director",
+                "createOrEditLabel": "Crear o editar Tesis Director",
+                "search": "Search for Tesis Director"
+            },
+            "created": "Un nuevo Tesis Director ha sido creado con el identificador {{ param }}",
+            "updated": "Un Tesis Director ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Tesis Director ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Tesis Director {{ id }}?"
+            },
+            "detail": {
+                "title": "Tesis Director"
+            },
+            "tesis": "Tesis",
+            "investigador": "Investigador",
+            "tipoasesor": "Tipoasesor"
+        }
+    }
+}

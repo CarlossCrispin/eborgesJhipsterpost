@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="eBorgesApp.tesisDirector.detail.title">Tesis Director</span> {{vm.tesisDirector.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eBorgesApp.tesisDirector.tesis">Tesis</span></dt>
+        <dd>
+            <a ui-sref="tesis-detail({id:vm.tesisDirector.tesis.id})">{{vm.tesisDirector.tesis.id}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesisDirector.investigador">Investigador</span></dt>
+        <dd>
+            <a ui-sref="investigador-detail({id:vm.tesisDirector.investigador.id})">{{vm.tesisDirector.investigador.nombre}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesisDirector.tipoasesor">Tipoasesor</span></dt>
+        <dd>
+            <a ui-sref="tipo-asesor-detail({id:vm.tesisDirector.tipoasesor.id})">{{vm.tesisDirector.tipoasesor.ntipo}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tesis-director-detail.edit({id:vm.tesisDirector.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

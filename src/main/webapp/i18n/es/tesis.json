@@ -1,0 +1,32 @@
+{
+    "eBorgesApp": {
+        "tesis" : {
+            "home": {
+                "title": "Teses",
+                "createLabel": "Crear nuevo Tesis",
+                "createOrEditLabel": "Crear o editar Tesis",
+                "search": "Search for Tesis"
+            },
+            "created": "Un nuevo Tesis ha sido creado con el identificador {{ param }}",
+            "updated": "Un Tesis ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Tesis ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Tesis {{ id }}?"
+            },
+            "detail": {
+                "title": "Tesis"
+            },
+            "titulodetesis": "Titulodetesis",
+            "fechadepublicacion": "Fechadepublicacion",
+            "resumen": "Resumen",
+            "clasificacion": "Clasificacion",
+            "clasificacion1": "Clasificacion 1",
+            "anio": "Anio",
+            "mes": "Mes",
+            "alumno": "Alumno",
+            "grado": "Grado",
+            "departamento": "Departamento",
+            "unidad": "Unidad"
+        }
+    }
+}

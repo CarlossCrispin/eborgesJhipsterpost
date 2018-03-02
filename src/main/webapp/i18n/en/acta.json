@@ -1,0 +1,26 @@
+{
+    "eBorgesApp": {
+        "acta" : {
+            "home": {
+                "title": "Actas",
+                "createLabel": "Create a new Acta",
+                "createOrEditLabel": "Create or edit a Acta",
+                "search": "Search for Acta"
+            },
+            "created": "A new Acta is created with identifier {{ param }}",
+            "updated": "A Acta is updated with identifier {{ param }}",
+            "deleted": "A Acta is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Acta {{ id }}?"
+            },
+            "detail": {
+                "title": "Acta"
+            },
+            "folio": "Folio",
+            "fechatomagrado": "Fechatomagrado",
+            "tesis": "Tesis",
+            "alumno": "Alumno",
+            "unidad": "Unidad"
+        }
+    }
+}

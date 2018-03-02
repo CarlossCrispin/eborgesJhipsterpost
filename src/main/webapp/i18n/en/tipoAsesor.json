@@ -1,0 +1,22 @@
+{
+    "eBorgesApp": {
+        "tipoAsesor" : {
+            "home": {
+                "title": "Tipo Asesors",
+                "createLabel": "Create a new Tipo Asesor",
+                "createOrEditLabel": "Create or edit a Tipo Asesor",
+                "search": "Search for Tipo Asesor"
+            },
+            "created": "A new Tipo Asesor is created with identifier {{ param }}",
+            "updated": "A Tipo Asesor is updated with identifier {{ param }}",
+            "deleted": "A Tipo Asesor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Tipo Asesor {{ id }}?"
+            },
+            "detail": {
+                "title": "Tipo Asesor"
+            },
+            "ntipo": "Ntipo"
+        }
+    }
+}

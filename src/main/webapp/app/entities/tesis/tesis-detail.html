@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span data-translate="eBorgesApp.tesis.detail.title">Tesis</span> {{vm.tesis.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eBorgesApp.tesis.titulodetesis">Titulodetesis</span></dt>
+        <dd>
+            <span>{{vm.tesis.titulodetesis}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.fechadepublicacion">Fechadepublicacion</span></dt>
+        <dd>
+            <span>{{vm.tesis.fechadepublicacion | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.resumen">Resumen</span></dt>
+        <dd>
+            <span>{{vm.tesis.resumen}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.clasificacion">Clasificacion</span></dt>
+        <dd>
+            <span>{{vm.tesis.clasificacion}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.clasificacion1">Clasificacion 1</span></dt>
+        <dd>
+            <span>{{vm.tesis.clasificacion1}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.anio">Anio</span></dt>
+        <dd>
+            <span>{{vm.tesis.anio}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.mes">Mes</span></dt>
+        <dd>
+            <span>{{vm.tesis.mes}}</span>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.alumno">Alumno</span></dt>
+        <dd>
+            <a ui-sref="alumno-detail({id:vm.tesis.alumno.id})">{{vm.tesis.alumno.id}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.grado">Grado</span></dt>
+        <dd>
+            <a ui-sref="grado-detail({id:vm.tesis.grado.id})">{{vm.tesis.grado.ngrado}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.departamento">Departamento</span></dt>
+        <dd>
+            <a ui-sref="departamento-detail({id:vm.tesis.departamento.id})">{{vm.tesis.departamento.ndepartamento}}</a>
+        </dd>
+        <dt><span data-translate="eBorgesApp.tesis.unidad">Unidad</span></dt>
+        <dd>
+            <a ui-sref="unidad-detail({id:vm.tesis.unidad.id})">{{vm.tesis.unidad.nunidad}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tesis-detail.edit({id:vm.tesis.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

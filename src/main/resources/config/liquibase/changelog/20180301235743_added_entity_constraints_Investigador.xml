@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Investigador.
+    -->
+    <changeSet id="20180301235743-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="genero_id"
+                                 baseTableName="investigador"
+                                 constraintName="fk_investigador_genero_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="genero"/>
+
+        <addForeignKeyConstraint baseColumnNames="grado_id"
+                                 baseTableName="investigador"
+                                 constraintName="fk_investigador_grado_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="grado"/>
+
+        <addForeignKeyConstraint baseColumnNames="departamento_id"
+                                 baseTableName="investigador"
+                                 constraintName="fk_investigador_departamento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="departamento"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,22 @@
+{
+    "eBorgesApp": {
+        "grado" : {
+            "home": {
+                "title": "Grados",
+                "createLabel": "Crear nuevo Grado",
+                "createOrEditLabel": "Crear o editar Grado",
+                "search": "Search for Grado"
+            },
+            "created": "Un nuevo Grado ha sido creado con el identificador {{ param }}",
+            "updated": "Un Grado ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Grado ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Grado {{ id }}?"
+            },
+            "detail": {
+                "title": "Grado"
+            },
+            "ngrado": "Ngrado"
+        }
+    }
+}

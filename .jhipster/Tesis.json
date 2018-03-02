@@ -1,0 +1,65 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "alumno",
+            "otherEntityName": "alumno",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "grado",
+            "otherEntityName": "grado",
+            "otherEntityField": "ngrado"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "departamento",
+            "otherEntityName": "departamento",
+            "otherEntityField": "ndepartamento"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "unidad",
+            "otherEntityName": "unidad",
+            "otherEntityField": "nunidad"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "titulodetesis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechadepublicacion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "resumen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clasificacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clasificacion1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "anio",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "mes",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180302003907",
+    "entityTableName": "tesis",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
