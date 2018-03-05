@@ -4,7 +4,7 @@
     "fields": [
         {
             "fieldName": "ntipo",
-            "fieldType": "Integer"
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20180302003903",

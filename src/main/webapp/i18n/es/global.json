@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "EBorges",
+        "title": "e-Borges",
         "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualice su navegador</a> para mejorar su experiencia.",
         "menu": {
             "home": "Inicio",
@@ -23,7 +23,7 @@
             },
             "account": {
                 "main": "Cuenta",
-                "settings": "Ajustes",
+                "settings": "Perfil",
                 "password": "Contraseña",
                 "sessions": "Sesiones",
                 "login": "Iniciar sesión",
@@ -133,5 +133,5 @@
         "emailexists": "Email is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "pie de página"
+    "footer": "Copyright &copy; 2018 e-Borges All rights reserved"
 }

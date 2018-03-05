@@ -5,9 +5,9 @@
         .module('eBorgesApp')
         .controller('TesisDetailController', TesisDetailController);
 
-    TesisDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad'];
+    TesisDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad', 'Investigador', 'TipoAsesor'];
 
-    function TesisDetailController($scope, $rootScope, $stateParams, previousState, entity, Tesis, Alumno, Grado, Departamento, Unidad) {
+    function TesisDetailController($scope, $rootScope, $stateParams, previousState, entity, Tesis, Alumno, Grado, Departamento, Unidad, Investigador, TipoAsesor) {
         var vm = this;
 
         vm.tesis = entity;

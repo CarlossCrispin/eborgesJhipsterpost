@@ -22,7 +22,7 @@ entity Departamento{
 	ndepartamento String   
 }
 entity  TipoAsesor{
-    ntipo Integer
+    ntipo String
 }
 entity  Especialidad{
     nespecialidad String
@@ -70,14 +70,33 @@ relationship ManyToOne {
     Investigador{grado(ngrado)} to Grado
     Investigador{departamento(ndepartamento)} to Departamento
     
-    Tesis{alumno} to Alumno
+    Tesis{alumno(matricula)} to Alumno
     Tesis{grado(ngrado)} to Grado
     Tesis{departamento(ndepartamento)} to Departamento
     Tesis{unidad(nunidad)} to Unidad
     
+    Tesis{investigador1(id)} to Investigador
+    Tesis{tipoasesor1(ntipo)} to TipoAsesor
+    Tesis{investigador2(id)} to Investigador
+    Tesis{tipoasesor2(ntipo)} to TipoAsesor
+    Tesis{investigador3(id)} to Investigador
+    Tesis{tipoasesor3(ntipo)} to TipoAsesor
+    Tesis{investigador4(id)} to Investigador
+    Tesis{tipoasesor4(ntipo)} to TipoAsesor
+    Tesis{investigador5(id)} to Investigador
+    Tesis{tipoasesor5(ntipo)} to TipoAsesor
+    
     TesisDirector{tesis} to Tesis
-    TesisDirector{investigador(nombre)} to Investigador
-    TesisDirector{tipoasesor(ntipo)} to TipoAsesor
+    TesisDirector{investigador1(id)} to Investigador
+    TesisDirector{tipoasesor1(ntipo)} to TipoAsesor
+    TesisDirector{investigador2(id)} to Investigador
+    TesisDirector{tipoasesor2(ntipo)} to TipoAsesor
+    TesisDirector{investigador3(id)} to Investigador
+    TesisDirector{tipoasesor3(ntipo)} to TipoAsesor
+    TesisDirector{investigador4(id)} to Investigador
+    TesisDirector{tipoasesor4(ntipo)} to TipoAsesor
+    TesisDirector{investigador5(id)} to Investigador
+    TesisDirector{tipoasesor5(ntipo)} to TipoAsesor
     
 }
 

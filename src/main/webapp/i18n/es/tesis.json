@@ -16,17 +16,27 @@
             "detail": {
                 "title": "Tesis"
             },
-            "titulodetesis": "Titulodetesis",
-            "fechadepublicacion": "Fechadepublicacion",
+            "titulodetesis": "Titulo de Tesis",
+            "fechadepublicacion": "Fecha de publicacion",
             "resumen": "Resumen",
             "clasificacion": "Clasificacion",
             "clasificacion1": "Clasificacion 1",
-            "anio": "Anio",
+            "anio": "Año",
             "mes": "Mes",
             "alumno": "Alumno",
             "grado": "Grado",
             "departamento": "Departamento",
-            "unidad": "Unidad"
+            "unidad": "Unidad",
+            "investigador1": "Investigador 1",
+            "tipoasesor1": "Tipo asesor 1",
+            "investigador2": "Investigador 2",
+            "tipoasesor2": "Tipo asesor 2",
+            "investigador3": "Investigador 3",
+            "tipoasesor3": "Tipo asesor 3",
+            "investigador4": "Investigador 4",
+            "tipoasesor4": "Tipo asesor 4",
+            "investigador5": "Investigador 5",
+            "tipoasesor5": "Tipo asesor 5"
         }
     }
 }

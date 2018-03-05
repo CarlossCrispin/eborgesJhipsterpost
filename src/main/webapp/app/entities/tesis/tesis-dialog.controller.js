@@ -5,9 +5,9 @@
         .module('eBorgesApp')
         .controller('TesisDialogController', TesisDialogController);
 
-    TesisDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad'];
+    TesisDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad', 'Investigador', 'TipoAsesor',];
 
-    function TesisDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tesis, Alumno, Grado, Departamento, Unidad) {
+    function TesisDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tesis, Alumno, Grado, Departamento, Unidad, Investigador, TipoAsesor) {
         var vm = this;
 
         vm.tesis = entity;
@@ -19,6 +19,8 @@
         vm.grados = Grado.query();
         vm.departamentos = Departamento.query();
         vm.unidads = Unidad.query();
+        vm.investigadors = Investigador.query();
+        vm.tipoasesors = TipoAsesor.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

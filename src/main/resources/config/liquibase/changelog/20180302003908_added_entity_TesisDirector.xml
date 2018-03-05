@@ -25,11 +25,43 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="investigador_id" type="bigint">
+            <column name="investigador1_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 
-            <column name="tipoasesor_id" type="bigint">
+            <column name="tipoasesor1_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="investigador2_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipoasesor2_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="investigador3_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipoasesor3_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="investigador4_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipoasesor4_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="investigador5_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipoasesor5_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 

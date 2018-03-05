@@ -1,3 +1,47 @@
+<script type="text/javascript">
+    function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+        element = document.getElementById("content1");
+        check = document.getElementById("check1");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+        element = document.getElementById("content2");
+        check = document.getElementById("check2");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+        element = document.getElementById("content3");
+        check = document.getElementById("check3");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+        element = document.getElementById("content4");
+        check = document.getElementById("check4");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
 
 <form name="editForm" role="form" novalidate ng-submit="vm.save()">
 
@@ -19,7 +63,7 @@
                     ng-model="vm.tesis.titulodetesis"
                     />
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.fechadepublicacion" for="field_fechadepublicacion">Fechadepublicacion</label>
                 <div class="input-group">
                     <input id="field_fechadepublicacion" type="text" class="form-control" name="fechadepublicacion" datetime-picker="{{dateformat}}" ng-model="vm.tesis.fechadepublicacion" is-open="vm.datePickerOpenStatus.fechadepublicacion"
@@ -28,41 +72,41 @@
                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechadepublicacion')"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
                 </div>
-        </div>
+        </div> -->
         <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.resumen" for="field_resumen">Resumen</label>
             <input type="text" class="form-control" name="resumen" id="field_resumen"
                     ng-model="vm.tesis.resumen"
                     />
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.clasificacion" for="field_clasificacion">Clasificacion</label>
             <input type="text" class="form-control" name="clasificacion" id="field_clasificacion"
                     ng-model="vm.tesis.clasificacion"
                     />
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.clasificacion1" for="field_clasificacion1">Clasificacion 1</label>
             <input type="text" class="form-control" name="clasificacion1" id="field_clasificacion1"
                     ng-model="vm.tesis.clasificacion1"
                     />
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.anio" for="field_anio">Anio</label>
             <input type="number" class="form-control" name="anio" id="field_anio"
                     ng-model="vm.tesis.anio"
                     />
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
             <label class="control-label" data-translate="eBorgesApp.tesis.mes" for="field_mes">Mes</label>
             <input type="number" class="form-control" name="mes" id="field_mes"
                     ng-model="vm.tesis.mes"
                     />
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label data-translate="eBorgesApp.tesis.alumno" for="field_alumno">Alumno</label>
-            <select class="form-control" id="field_alumno" name="alumno" ng-model="vm.tesis.alumno" ng-options="alumno as alumno.id for alumno in vm.alumnos track by alumno.id">
+            <select class="form-control" id="field_alumno" name="alumno" ng-model="vm.tesis.alumno" ng-options="alumno as alumno.matricula+ alumno.nombre + alumno.apellido1 for alumno in vm.alumnos track by alumno.id">
                 <option value=""></option>
             </select>
         </div>
@@ -83,6 +127,143 @@
             <select class="form-control" id="field_unidad" name="unidad" ng-model="vm.tesis.unidad" ng-options="unidad as unidad.nunidad for unidad in vm.unidads track by unidad.id">
                 <option value=""></option>
             </select>
+        </div>
+        <div class="form-group">
+            <div class="class col-md-12">
+                <div class="class col-md-7">
+                    <label data-translate="eBorgesApp.tesis.investigador1" for="field_investigador1">Investigador 1</label>
+                    <select  class="form-control" id="field_investigador1" name="investigador1" ng-model="vm.tesis.investigador1" ng-options="investigador as investigador.id +
+                    investigador.nombre + investigador.apellido1 + investigador.apellido2
+                    for investigador in vm.investigadors track by investigador.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="clas col-md-3">
+                    <div class="form-group">
+                        <label data-translate="eBorgesApp.tesis.tipoasesor1" for="field_tipoasesor1">Tipoasesor 1</label>
+                        <select class="form-control" id="field_tipoasesor1" name="tipoasesor1" ng-model="vm.tesis.tipoasesor1" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clss col-md-2">
+                    <b>¿Es externo?</b>
+                    <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+                </div>
+            </div>
+            <div id="content" style="display: none;">
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="class col-md-12">
+                <div class="class col-md-7">
+                    <label data-translate="eBorgesApp.tesis.investigador2" for="field_investigador2">Investigador 2</label>
+                    <select class="form-control" id="field_investigador2" name="investigador2" ng-model="vm.tesis.investigador2" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="class col-md-3">
+                    <div class="form-group">
+                        <label data-translate="eBorgesApp.tesis.tipoasesor2" for="field_tipoasesor2">Tipoasesor 2</label>
+                        <select class="form-control" id="field_tipoasesor2" name="tipoasesor2" ng-model="vm.tesis.tipoasesor2" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="class col-md-2">
+                    <b>¿Es externo?</b>
+                    <input type="checkbox" name="check1" id="check1" value="1" onchange="javascript:showContent()" />
+                </div>
+            </div>
+            <div id="content1" style="display: none;">
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="class col-md-12">
+                <div class="class col-md-7">
+                    <label data-translate="eBorgesApp.tesis.investigador3" for="field_investigador3">Investigador 3</label>
+                    <select class="form-control" id="field_investigador3" name="investigador3" ng-model="vm.tesis.investigador3" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="class col-md-3">
+                    <div class="form-group">
+                        <label data-translate="eBorgesApp.tesis.tipoasesor3" for="field_tipoasesor3">Tipoasesor 3</label>
+                        <select class="form-control" id="field_tipoasesor3" name="tipoasesor3" ng-model="vm.tesis.tipoasesor3" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="class col-md-2">
+                    <b>¿Es externo?</b>
+                    <input type="checkbox" name="check2" id="check2" value="1" onchange="javascript:showContent()" />
+                </div>
+            </div>
+            <div id="content2" style="display: none;">
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="class col-md-12">
+                <div class="class col-md-7">
+                    <label data-translate="eBorgesApp.tesis.investigador4" for="field_investigador4">Investigador 3</label>
+                    <select class="form-control" id="field_investigador4" name="investigador4" ng-model="vm.tesis.investigador4" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="class col-md-3">
+                    <div class="form-group">
+                        <label data-translate="eBorgesApp.tesis.tipoasesor4" for="field_tipoasesor4">Tipoasesor 3</label>
+                        <select class="form-control" id="field_tipoasesor4" name="tipoasesor4" ng-model="vm.tesis.tipoasesor4" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="class col-md-2">
+                    <b>¿Es externo?</b>
+                    <input type="checkbox" name="check3" id="check3" value="1" onchange="javascript:showContent()" />
+                </div>
+            </div>
+            <div id="content3" style="display: none;">
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="class col-md-12">
+                <div class="class col-md-7">
+                    <label data-translate="eBorgesApp.tesis.investigador5" for="field_investigador5">Investigador 3</label>
+                    <select class="form-control" id="field_investigador5" name="investigador5" ng-model="vm.tesis.investigador5" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="class col-md-3">
+                    <div class="form-group">
+                        <label data-translate="eBorgesApp.tesis.tipoasesor5" for="field_tipoasesor5">Tipoasesor 3</label>
+                        <select class="form-control" id="field_tipoasesor5" name="tipoasesor5" ng-model="vm.tesis.tipoasesor5" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="class col-md-2">
+                    <b>¿Es externo?</b>
+                    <input type="checkbox" name="check4" id="check4" value="1" onchange="javascript:showContent()" />
+                </div>
+            </div>
+            <div id="content4" style="display: none;">
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+                contenido del div escondido<br/>
+            </div>
         </div>
     </div>
     <div class="modal-footer">

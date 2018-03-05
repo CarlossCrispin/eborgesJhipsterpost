@@ -32,5 +32,65 @@
                                  referencedColumnNames="id"
                                  referencedTableName="unidad"/>
 
+        <addForeignKeyConstraint baseColumnNames="investigador1_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_investigador1_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor1_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_tipoasesor1_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="investigador2_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_investigador2_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor2_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_tipoasesor2_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="investigador3_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_investigador3_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor3_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_tipoasesor3_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="investigador4_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_investigador4_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor4_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_tipoasesor4_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="investigador5_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_investigador5_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="investigador"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipoasesor5_id"
+                                 baseTableName="tesis"
+                                 constraintName="fk_tesis_tipoasesor5_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_asesor"/>
+
     </changeSet>
 </databaseChangeLog>

@@ -26,7 +26,7 @@ public class TipoAsesor implements Serializable {
     private Long id;
 
     @Column(name = "ntipo")
-    private Integer ntipo;
+    private String ntipo;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -37,16 +37,16 @@ public class TipoAsesor implements Serializable {
         this.id = id;
     }
 
-    public Integer getNtipo() {
+    public String getNtipo() {
         return ntipo;
     }
 
-    public TipoAsesor ntipo(Integer ntipo) {
+    public TipoAsesor ntipo(String ntipo) {
         this.ntipo = ntipo;
         return this;
     }
 
-    public void setNtipo(Integer ntipo) {
+    public void setNtipo(String ntipo) {
         this.ntipo = ntipo;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
@@ -75,7 +75,7 @@ public class TipoAsesor implements Serializable {
     public String toString() {
         return "TipoAsesor{" +
             "id=" + getId() +
-            ", ntipo=" + getNtipo() +
+            ", ntipo='" + getNtipo() + "'" +
             "}";
     }
 }

@@ -9,13 +9,61 @@
         },
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "investigador",
+            "relationshipName": "investigador1",
             "otherEntityName": "investigador",
-            "otherEntityField": "nombre"
+            "otherEntityField": "id"
         },
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "tipoasesor",
+            "relationshipName": "tipoasesor1",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador2",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor2",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador3",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor3",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador4",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor4",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador5",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor5",
             "otherEntityName": "tipoAsesor",
             "otherEntityField": "ntipo"
         }

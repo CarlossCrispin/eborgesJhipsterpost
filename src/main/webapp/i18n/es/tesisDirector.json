@@ -17,8 +17,16 @@
                 "title": "Tesis Director"
             },
             "tesis": "Tesis",
-            "investigador": "Investigador",
-            "tipoasesor": "Tipoasesor"
+            "investigador1": "Investigador 1",
+            "tipoasesor1": "Tipoasesor 1",
+            "investigador2": "Investigador 2",
+            "tipoasesor2": "Tipoasesor 2",
+            "investigador3": "Investigador 3",
+            "tipoasesor3": "Tipoasesor 3",
+            "investigador4": "Investigador 4",
+            "tipoasesor4": "Tipoasesor 4",
+            "investigador5": "Investigador 5",
+            "tipoasesor5": "Tipoasesor 5"
         }
     }
 }

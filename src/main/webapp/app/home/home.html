@@ -1,41 +1,115 @@
 <div ng-cloak>
     <div class="row">
-        <div class="col-md-4">
-            <span class="hipster img-responsive img-rounded"></span>
-        </div>
-        <div class="col-md-8">
-            <h1 data-translate="home.title">Welcome, Java Hipster!</h1>
-            <p class="lead" data-translate="home.subtitle">This is your homepage</p>
-
-            <div ng-switch="vm.isAuthenticated()">
+        <div class="col-md-12">
+            <div ng-switch="vm.isAuthenticated()" class="text-center">
                 <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
                     You are logged in as user "{{vm.account.login}}".
                 </div>
-
-                <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>
-                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
-                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
-                </div>
             </div>
+        </div>
+        <div class="col-md-12">
+            <!-- <h1 data-translate="home.title">Welcome, Java Hipster!</h1>
+            <p class="lead" data-translate="home.subtitle">This is your homepage</p> -->
 
-            <p data-translate="home.question">
+            <img src="content\images\hipster.png" alt="Logotipo de HTML5" width="1000" height="353" >
+            
+            <!-- <span class="hipster img-responsive img-rounded"></span> -->
+           
+            <!-- <p data-translate="home.question">
                 If you have any question on JHipster:
-            </p>
+            </p> -->
 
-            <ul>
+            <!-- <ul>
                 <li><a href="http://www.jhipster.tech/" target="_blank" rel="noopener" data-translate="home.link.homepage">JHipster homepage</a></li>
                 <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener" data-translate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
                 <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener" data-translate="home.link.bugtracker">JHipster bug tracker</a></li>
                 <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" data-translate="home.link.chat">JHipster public chat room</a></li>
                 <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener" data-translate="home.link.follow">follow @java_hipster on Twitter</a></li>
-            </ul>
+            </ul> -->
 
-            <p>
-             <span data-translate="home.like">If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" data-translate="home.github">GitHub</a>!
-            </p>
+           
         </div>
     </div>
 </div>
+<div ng-switch=`vm.isAuthenticated()` >
+        
+    <h1 ng-if="vm.account.login('alumno')">1n</h1>
+    <h1 data-ng-if="vm.account.login('alumno')">2</h1>
+    <!-- <h1 vm.account.login>usuario</h1> -->
+    
+        <!-- <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
+            You are logged in as user "{{vm.account.login}}".
+        </div> -->
+        
+       
+        
+    </div >
+    <div ng-class="{active: vm.$state.includes('alumno')}"   has-authority="ROLE_ALUMNO">
+        <h1 >ALUMNO</h1>
+    </div>
+    <div ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER">
+        <h1 >USER</h1>
+    </div>
+    <div ng-class="{active: vm.$state.includes('admin')}"   has-authority="ROLE_ADMIN">
+        <h1 >ADMIN</h1>
+    </div>
+    <!-- <div ng-switch="vm.isAuthenticated()">
+            <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
+                You are logged in as user "{{vm.account.login}}".
+            </div> 
+            <div class="alert alert-warning" ng-switch-when="true" >
+                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+                </div>
+    
+            <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>
+                If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+            </div>
+    
+            <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
+                You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+            </div>
+            
+        </div> -->
+<!-- <li ng-class="{active: vm.$state.includes('admin')}"   has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer"> -->
+<!-- <li ng-class="{active: vm.$state.includes('admin')}"   has-authority="ROLE_ADMIN" > -->
+<li ng-class="{active: vm.$state.includes('alumno')}"   has-authority="ROLE_ALUMNO" >
+    <div >
+        
+        <form>
+                <select name="miVehiculo" id="miSelect" onchange="capturarSelect(this);">
+                    <option value="0">selecciona</option>
+                    <option value="1">coches</option>
+                    <option value="2">motos</option>
+                </select>
+    
+                <select name="miPais" id="miSelect" onchange="capturarSelect(this);">
+                    <option value="0">selecciona</option>
+                    <option value="1">Argentina</option>
+                    <option value="2">México</option>
+                </select>
+            </form>
+    
+            <!-- aqui mostramos el resultado -->
+            <div id="resultado"></div>
+        <script>
+            function capturarSelect(objeto)
+            {
+                // obtenemos el indice del option seleccionado
+                var indice=objeto.selectedIndex;
+    
+                if(objeto.value>0)
+                {
+    
+                    // mediantes su indice, mostramos el texto, no el value!!!
+                    var resultado="La opción seleccionada es "+objeto.options[indice].text;
+                    document.getElementById("resultado").innerHTML=resultado;
+                }else{
+    
+                    // Si ha seleccionado la primera opcion, vaciamos...
+                    document.getElementById("resultado").innerHTML="";
+                }
+            }
+        </script>
+
+    </div>
+</li>

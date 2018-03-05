@@ -20,22 +20,101 @@
     <!-- endbuild -->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
+    <!-- dependencia del sidebar stylo -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body ng-app="eBorgesApp" ng-strict-di>
+<body class="skin-blue" ng-app="eBorgesApp" ng-strict-di>
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <page-ribbon></page-ribbon>
+    <!-- <page-ribbon></page-ribbon> -->
     <div ui-view="navbar" ng-cloak></div>
-    <div class="container">
-        <div class="well" ui-view="content">
-            <!-- Angular views -->
-        </div>
-
-        <div class="footer" ng-cloak>
-            <p data-translate="footer">This is your footer</p>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
+        <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-home"></span>
+       </a>
+       
+       <a class="w3-bar-item w3-button" ui-sref="tesis" ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-pencil"></span>&nbsp;
+           <span id="lbtesis" data-translate="global.menu.entities.tesis" class="etiquetaMenu">Tesis</span>
+       </a>
+       
+       <a class="w3-bar-item w3-button"   ui-sref="settings" ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-user"></span>&nbsp;
+           <span id = "lbsettings" data-translate="global.menu.account.settings" class="etiquetaMenu">Perfil</span>
+       </a>
+       <!-- <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
+           <span id = "lblmedic" data-translate="global.menu.entities.medic">Medic</span>
+       </a>
+       <a class="w3-bar-item w3-button" ui-sref="nurse" ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-heart"></span>&nbsp;
+           <span id = "lblnurse" data-translate="global.menu.entities.nurse">Nurse</span>
+       </a>
+       <a class="w3-bar-item w3-button" ui-sref="reports"  ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-file"></span>&nbsp;
+           <span id = "lblreports" data-translate="global.menu.entities.reports">Reports</span>
+       </a>
+       <a class="w3-bar-item w3-button" ui-sref="company" ng-click="vm.collapseNavbar()">
+           <span class="glyphicon glyphicon-header"></span>&nbsp;
+           <span id = "lblcompany" data-translate="global.menu.entities.company">Company</span>
+       </a>
+        -->
+      
+   </div>
+   <div id="main" style="margin-left:5%">        
+        <div class="container">  
+            <div class="well" ui-view="content">
+                
+            </div>
+            <div class="main-footer" ng-cloak>
+                <p data-translate="footer">"Copyright &copy; 2017-2018 Biti All rights reserved"</p>
+            </div>
         </div>
     </div>
+    <script>
+        habilita(false);
+        function w3_taggle(){
+            if(document.getElementById("main").style.marginLeft == "5%" 
+                || document.getElementById("main").style.marginLeft == "" ){
+                    // document.getElementsByClassName("etiquetaMenu").style.display = 'block';
+                document.getElementById("main2").style.marginLeft = "20%";
+                document.getElementById("main").style.marginLeft = "20%";
+                document.getElementById("mySidebar").style.width = "20%";
+                document.getElementById("mySidebar").style.display = "block";
+                // document.getElementById("openNav").style.display = 'none';
+                habilita(true);
+            }else{
+                // document.getElementsByClassName("etiquetaMenu").style.display = 'none';
+                document.getElementById("main2").style.marginLeft = "5%";
+                document.getElementById("main").style.marginLeft = "5%";
+                document.getElementById("mySidebar").style.width = "5%";
+                // document.getElementById("openNav").style.display = "inline-block";
+                habilita(false);
+            }
+        }
+
+        function habilita(valor){
+            if(valor){
+                document.getElementById("lbtesis").style.display = "inline-block";
+                document.getElementById("lbsettings").style.display = "inline-block";
+                document.getElementById("lblmedic").style.display = "inline-block";
+                document.getElementById("lblnurse").style.display = "inline-block";
+                document.getElementById("lblreports").style.display = "inline-block";
+                document.getElementById("lblcompany").style.display = "inline-block";
+            }else{
+                document.getElementById("btesis").style.display = "none";
+                document.getElementById("lbsettings").style.display = "none";
+                document.getElementById("lblmedic").style.display = "none";
+                document.getElementById("lblnurse").style.display = "none";
+                document.getElementById("lblreports").style.display = "none";
+                document.getElementById("lblcompany").style.display = "none";
+                
+            }
+        }
+
+    </script>
+
     <noscript>
         <h1>You must enable javascript to view this page.</h1>
     </noscript>

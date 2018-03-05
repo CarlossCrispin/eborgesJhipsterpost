@@ -39,8 +39,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = EBorgesApp.class)
 public class TipoAsesorResourceIntTest {
 
-    private static final Integer DEFAULT_NTIPO = 1;
-    private static final Integer UPDATED_NTIPO = 2;
+    private static final String DEFAULT_NTIPO = "AAAAAAAAAA";
+    private static final String UPDATED_NTIPO = "BBBBBBBBBB";
 
     @Autowired
     private TipoAsesorRepository tipoAsesorRepository;
@@ -145,7 +145,7 @@ public class TipoAsesorResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(tipoAsesor.getId().intValue())))
-            .andExpect(jsonPath("$.[*].ntipo").value(hasItem(DEFAULT_NTIPO)));
+            .andExpect(jsonPath("$.[*].ntipo").value(hasItem(DEFAULT_NTIPO.toString())));
     }
 
     @Test
@@ -159,7 +159,7 @@ public class TipoAsesorResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(tipoAsesor.getId().intValue()))
-            .andExpect(jsonPath("$.ntipo").value(DEFAULT_NTIPO));
+            .andExpect(jsonPath("$.ntipo").value(DEFAULT_NTIPO.toString()));
     }
 
     @Test
@@ -253,7 +253,7 @@ public class TipoAsesorResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(tipoAsesor.getId().intValue())))
-            .andExpect(jsonPath("$.[*].ntipo").value(hasItem(DEFAULT_NTIPO)));
+            .andExpect(jsonPath("$.[*].ntipo").value(hasItem(DEFAULT_NTIPO.toString())));
     }
 
     @Test

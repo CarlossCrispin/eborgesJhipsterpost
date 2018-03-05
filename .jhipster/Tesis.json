@@ -5,7 +5,7 @@
             "relationshipType": "many-to-one",
             "relationshipName": "alumno",
             "otherEntityName": "alumno",
-            "otherEntityField": "id"
+            "otherEntityField": "matricula"
         },
         {
             "relationshipType": "many-to-one",
@@ -24,6 +24,66 @@
             "relationshipName": "unidad",
             "otherEntityName": "unidad",
             "otherEntityField": "nunidad"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador1",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor1",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador2",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor2",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador3",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor3",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador4",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor4",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "investigador5",
+            "otherEntityName": "investigador",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tipoasesor5",
+            "otherEntityName": "tipoAsesor",
+            "otherEntityField": "ntipo"
         }
     ],
     "fields": [
