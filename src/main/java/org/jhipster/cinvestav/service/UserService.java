@@ -124,7 +124,9 @@ public class UserService {
         return newUser;
     }
 
-    public User createUser(UserDTO userDTO) {
+    public User createUser(UserDTO userDTO) 
+//public User createUser(ManagedUserVM managedUserVM)
+    {
         User user = new User();
         user.setLogin(userDTO.getLogin());
         user.setFirstName(userDTO.getFirstName());
@@ -142,7 +144,9 @@ public class UserService {
                 .collect(Collectors.toSet());
             user.setAuthorities(authorities);
         }
-        String encryptedPassword = passwordEncoder.encode(RandomUtil.generatePassword());
+        //String encryptedPassword = passwordEncoder.encode(RandomUtil.generatePassword());
+       
+        String encryptedPassword = passwordEncoder.encode(userDTO.getLogin());
         user.setPassword(encryptedPassword);
         user.setResetKey(RandomUtil.generateResetKey());
         user.setResetDate(Instant.now());

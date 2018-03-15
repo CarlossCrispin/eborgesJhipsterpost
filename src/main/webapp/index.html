@@ -16,11 +16,13 @@
     <!-- endinject -->
     <!-- endbuild -->
     <!-- build:css content/css/main.css -->
-    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="content/css/vendor.css">
+    <!-- <link rel="stylesheet" href="content/css/main.css"> -->
     <!-- endbuild -->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
     <!-- dependencia del sidebar stylo -->
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body class="skin-blue" ng-app="eBorgesApp" ng-strict-di>
@@ -29,11 +31,12 @@
     <![endif]-->
     <!-- <page-ribbon></page-ribbon> -->
     <div ui-view="navbar" ng-cloak></div>
+
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
         <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-home"></span>
-       </a>
-       
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+      
        <a class="w3-bar-item w3-button" ui-sref="tesis" ng-click="vm.collapseNavbar()">
            <span class="glyphicon glyphicon-pencil"></span>&nbsp;
            <span id="lbtesis" data-translate="global.menu.entities.tesis" class="etiquetaMenu">Tesis</span>
@@ -43,6 +46,31 @@
            <span class="glyphicon glyphicon-user"></span>&nbsp;
            <span id = "lbsettings" data-translate="global.menu.account.settings" class="etiquetaMenu">Perfil</span>
        </a>
+    
+        <a  class="w3-bar-item w3-button"  ui-sref="password" ng-click="vm.collapseNavbar()">
+            <span class="glyphicon glyphicon-lock"></span>&nbsp;
+            <span  id = "lbPassword" data-translate="global.menu.account.password">Password</span>
+        </a>
+        <!-- <li class="w3-bar-item w3-button" ui-sref-active="active" ng-switch-when="true" ng-click="vm.collapseNavbar()">
+            <a  href="" ng-click="vm.logout()" id="logout">
+                <span class="glyphicon glyphicon-log-out"></span>&nbsp;
+                <span data-translate="global.menu.account.logout">Sign out</span>
+            </a>
+        </li>
+        <li ui-sref-active="active" ng-switch-when="false">
+            <a href="" ng-click="vm.login()" id="login">
+                <span class="glyphicon glyphicon-log-in"></span>&nbsp;
+                <span data-translate="global.menu.account.login">Sign in</span>
+            </a>
+        </li>
+        <li ui-sref-active="active" ng-switch-when="false">
+            <a ui-sref="register" ng-click="vm.collapseNavbar()">
+                <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
+                <span data-translate="global.menu.account.register">Register</span>
+            </a>
+        </li>
+       -->
+        
        <!-- <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseNavbar()">
            <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
            <span id = "lblmedic" data-translate="global.menu.entities.medic">Medic</span>
@@ -62,13 +90,16 @@
         -->
       
    </div>
+
    <div id="main" style="margin-left:5%">        
         <div class="container">  
             <div class="well" ui-view="content">
                 
             </div>
             <div class="main-footer" ng-cloak>
-                <p data-translate="footer">"Copyright &copy; 2017-2018 Biti All rights reserved"</p>
+                <div class="text-center">
+                    <p data-translate="footer">"Copyright &copy; 2017-2018 Biti All rights reserved"</p>
+                </div>
             </div>
         </div>
     </div>
@@ -96,19 +127,27 @@
 
         function habilita(valor){
             if(valor){
+                // document.getElementById("lblreservation").style.display = "inline-block";
+                // document.getElementById("lblpacient").style.display = "inline-block";
+                // document.getElementById("lblmedic").style.display = "inline-block";
+                // document.getElementById("lblnurse").style.display = "inline-block";
+                // document.getElementById("lblreports").style.display = "inline-block";
+                // document.getElementById("lblcompany").style.display = "inline-block";
                 document.getElementById("lbtesis").style.display = "inline-block";
                 document.getElementById("lbsettings").style.display = "inline-block";
-                document.getElementById("lblmedic").style.display = "inline-block";
-                document.getElementById("lblnurse").style.display = "inline-block";
-                document.getElementById("lblreports").style.display = "inline-block";
-                document.getElementById("lblcompany").style.display = "inline-block";
+                document.getElementById("lbPassword").style.display = "inline-block";
+                document.getElementById("lbsettings").style.display = "inline-block";
             }else{
-                document.getElementById("btesis").style.display = "none";
+                // document.getElementById("lblreservation").style.display = "none";
+                // document.getElementById("lblpacient").style.display = "none";
+                // document.getElementById("lblmedic").style.display = "none";
+                // document.getElementById("lblnurse").style.display = "none";
+                // document.getElementById("lblreports").style.display = "none";
+                document.getElementById("lbtesis").style.display = "none";
                 document.getElementById("lbsettings").style.display = "none";
-                document.getElementById("lblmedic").style.display = "none";
-                document.getElementById("lblnurse").style.display = "none";
-                document.getElementById("lblreports").style.display = "none";
-                document.getElementById("lblcompany").style.display = "none";
+                document.getElementById("lbPassword").style.display = "none";
+                document.getElementById("lbsettings").style.display = "none";
+                
                 
             }
         }

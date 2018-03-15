@@ -2,8 +2,8 @@
     "eBorgesApp": {
         "tesis" : {
             "home": {
-                "title": "Teses",
-                "createLabel": "Crear nuevo Tesis",
+                "title": "Tesis",
+                "createLabel": "Registrar Tesis",
                 "createOrEditLabel": "Crear o editar Tesis",
                 "search": "Search for Tesis"
             },

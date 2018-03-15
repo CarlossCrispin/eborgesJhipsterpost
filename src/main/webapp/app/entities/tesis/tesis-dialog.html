@@ -152,9 +152,73 @@
                 </div>
             </div>
             <div id="content" style="display: none;">
-                contenido del div escondido<br/>
-                contenido del div escondido<br/>
-                contenido del div escondido<br/>
+                <form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="vm.clear()">&times;</button>
+                        <h4 class="modal-title" id="myInvestigadorLabel" data-translate="eBorgesApp.investigador.home.createOrEditLabel">Create or edit a Investigador</h4>
+                    </div>
+                    <div class="modal-body">
+                        <jhi-alert-error></jhi-alert-error>
+                        <div class="form-group" ng-show="vm.investigador.id">
+                            <label for="id" data-translate="global.field.id">ID</label>
+                            <input type="text" class="form-control" id="id" name="id"
+                                    ng-model="vm.investigador.id" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" >Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                                    ng-model="vm.investigador.nombre"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" data-translate="eBorgesApp.investigador.apellido1" for="field_apellido1">Apellido 1</label>
+                            <input type="text" class="form-control" name="apellido1" id="field_apellido1"
+                                    ng-model="vm.investigador.apellido1"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" data-translate="eBorgesApp.investigador.apellido2" for="field_apellido2">Apellido 2</label>
+                            <input type="text" class="form-control" name="apellido2" id="field_apellido2"
+                                    ng-model="vm.investigador.apellido2"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" data-translate="eBorgesApp.investigador.esexterno" for="field_esexterno">Esexterno</label>
+                                <input type="checkbox" name="esexterno" id="field_esexterno"
+                                        ng-model="vm.investigador.esexterno"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="eBorgesApp.investigador.genero" for="field_genero">Genero</label>
+                            <select class="form-control" id="field_genero" name="genero" ng-model="vm.investigador.genero" ng-options="genero as genero.ngenero for genero in vm.generos track by genero.id">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="eBorgesApp.investigador.grado" for="field_grado">Grado</label>
+                            <select class="form-control" id="field_grado" name="grado" ng-model="vm.investigador.grado" ng-options="grado as grado.ngrado for grado in vm.grados track by grado.id">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="eBorgesApp.investigador.departamento" for="field_departamento">Departamento</label>
+                            <select class="form-control" id="field_departamento" name="departamento" ng-model="vm.investigador.departamento" ng-options="departamento as departamento.ndepartamento for departamento in vm.departamentos track by departamento.id">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
         <div class="form-group">
