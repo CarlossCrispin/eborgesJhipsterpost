@@ -16,6 +16,8 @@
         vm.generos = Genero.query();
         vm.grados = Grado.query();
         vm.departamentos = Departamento.query();
+        vm.gradosdir = Grado.query();
+        vm.departamentosdir = Departamento.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

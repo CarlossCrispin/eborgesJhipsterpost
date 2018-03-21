@@ -2,7 +2,7 @@
     "eBorgesApp": {
         "investigador" : {
             "home": {
-                "title": "Investigadors",
+                "title": "Investigadores",
                 "createLabel": "Crear nuevo Investigador",
                 "createOrEditLabel": "Crear o editar Investigador",
                 "search": "Search for Investigador"

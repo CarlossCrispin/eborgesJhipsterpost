@@ -36,21 +36,26 @@
         <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-home"></span>
         </a>
-      
-       <a class="w3-bar-item w3-button" ui-sref="tesis" ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-pencil"></span>&nbsp;
-           <span id="lbtesis" data-translate="global.menu.entities.tesis" class="etiquetaMenu">Tesis</span>
-       </a>
-       
-       <a class="w3-bar-item w3-button"   ui-sref="settings" ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-user"></span>&nbsp;
-           <span id = "lbsettings" data-translate="global.menu.account.settings" class="etiquetaMenu">Perfil</span>
-       </a>
-    
-        <a  class="w3-bar-item w3-button"  ui-sref="password" ng-click="vm.collapseNavbar()">
-            <span class="glyphicon glyphicon-lock"></span>&nbsp;
-            <span  id = "lbPassword" data-translate="global.menu.account.password">Password</span>
+        
+        <a class="w3-bar-item w3-button" ui-sref="tesis" ng-click="vm.collapseNavbar()">
+            <span class="glyphicon glyphicon-pencil"></span>&nbsp;
+            <span id="lbtesis" data-translate="global.menu.entities.tesis" class="etiquetaMenu">Tesis</span>
         </a>
+       
+        <a class="w3-bar-item w3-button"   ui-sref="settings" ng-click="vm.collapseNavbar()">
+            <span class="glyphicon glyphicon-user"></span>&nbsp;
+            <span id = "lbsettings" data-translate="global.menu.account.settings" class="etiquetaMenu">Perfil</span>
+        </a>
+        
+            <a  class="w3-bar-item w3-button"  ui-sref="password" ng-click="vm.collapseNavbar()">
+                <span class="glyphicon glyphicon-lock"></span>&nbsp;
+                <span  id = "lbPassword" data-translate="global.menu.account.password">Password</span>
+            </a>
+            <a  class="w3-bar-item w3-button"  ui-sref="investigador" ng-click="vm.collapseNavbar()">
+                <span class="glyphicon glyphicon-education"></span>&nbsp;
+                <span  id = "lbInvestigador" data-translate="global.menu.entities.investigador">Investigador</span>
+            </a>
+        
         <!-- <li class="w3-bar-item w3-button" ui-sref-active="active" ng-switch-when="true" ng-click="vm.collapseNavbar()">
             <a  href="" ng-click="vm.logout()" id="logout">
                 <span class="glyphicon glyphicon-log-out"></span>&nbsp;
@@ -136,7 +141,7 @@
                 document.getElementById("lbtesis").style.display = "inline-block";
                 document.getElementById("lbsettings").style.display = "inline-block";
                 document.getElementById("lbPassword").style.display = "inline-block";
-                document.getElementById("lbsettings").style.display = "inline-block";
+                document.getElementById("lbInvestigador").style.display = "inline-block";
             }else{
                 // document.getElementById("lblreservation").style.display = "none";
                 // document.getElementById("lblpacient").style.display = "none";
@@ -146,7 +151,7 @@
                 document.getElementById("lbtesis").style.display = "none";
                 document.getElementById("lbsettings").style.display = "none";
                 document.getElementById("lbPassword").style.display = "none";
-                document.getElementById("lbsettings").style.display = "none";
+                document.getElementById("lbInvestigador").style.display = "none";
                 
                 
             }

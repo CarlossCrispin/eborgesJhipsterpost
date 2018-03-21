@@ -5,9 +5,9 @@
         .module('eBorgesApp')
         .controller('TesisDialogController', TesisDialogController);
 
-    TesisDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad', 'Investigador', 'TipoAsesor'];
+    TesisDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tesis', 'Alumno', 'Grado', 'Departamento', 'Unidad', 'Investigador', 'TipoAsesor', 'Genero'];
 
-    function TesisDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tesis, Alumno, Grado, Departamento, Unidad, Investigador, TipoAsesor) {
+    function TesisDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tesis, Alumno, Grado, Departamento, Unidad, Investigador, TipoAsesor, Genero) {
         var vm = this;
 
         vm.tesis = entity;
@@ -21,6 +21,11 @@
         vm.unidads = Unidad.query();
         vm.investigadors = Investigador.query();
         vm.tipoasesors = TipoAsesor.query();
+
+        vm.investigador = entity;
+        vm.generos = Genero.query();
+       
+
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
@@ -37,10 +42,18 @@
             } else {
                 Tesis.save(vm.tesis, onSaveSuccess, onSaveError);
             }
+            if (vm.investigador.id !== null) {
+                Investigador.update(vm.investigador, onSaveSuccess, onSaveError);
+            } else {
+                Investigador.save(vm.investigador, onSaveSuccess, onSaveError);
+            }
         }
 
         function onSaveSuccess (result) {
             $scope.$emit('eBorgesApp:tesisUpdate', result);
+            $uibModalInstance.close(result);
+            vm.isSaving = false;
+            $scope.$emit('eBorgesApp:investigadorUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }
@@ -54,5 +67,6 @@
         function openCalendar (date) {
             vm.datePickerOpenStatus[date] = true;
         }
+        
     }
 })();

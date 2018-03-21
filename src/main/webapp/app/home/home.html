@@ -44,6 +44,9 @@
        
         
     </div >
+    <div ng-class="{active: vm.$state.includes('investigador')}"   has-authority="ROLE_INVESTIGADOR">
+        <h1 >INVESTIGADOR</h1>
+    </div>
     <div ng-class="{active: vm.$state.includes('alumno')}"   has-authority="ROLE_ALUMNO">
         <h1 >ALUMNO</h1>
     </div>

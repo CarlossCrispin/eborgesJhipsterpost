@@ -146,12 +146,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="clss col-md-2">
+                <!-- <div class="clss col-md-2">
                     <b>¿Es externo?</b>
                     <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
-                </div>
+                </div> -->
             </div>
-            <div id="content" style="display: none;">
+            <!-- <div id="content" style="display: none;">
                 <form name="editForm" role="form" novalidate ng-submit="vm.save()">
 
                     <div class="modal-header">
@@ -219,13 +219,15 @@
                     </div>
                 </form>
 
-            </div>
+            </div> -->
         </div>
         <div class="form-group">
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador2" for="field_investigador2">Investigador 2</label>
-                    <select class="form-control" id="field_investigador2" name="investigador2" ng-model="vm.tesis.investigador2" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                    <select class="form-control" id="field_investigador2" name="investigador2" ng-model="vm.tesis.investigador2" ng-options="investigador as investigador.id +
+                    investigador.nombre + investigador.apellido1 + investigador.apellido2
+                    for investigador in vm.investigadors track by investigador.id">
                         <option value=""></option>
                     </select>
                 </div>
@@ -237,10 +239,10 @@
                         </select>
                     </div>
                 </div>
-                <div class="class col-md-2">
+                <!-- <div class="class col-md-2">
                     <b>¿Es externo?</b>
                     <input type="checkbox" name="check1" id="check1" value="1" onchange="javascript:showContent()" />
-                </div>
+                </div> -->
             </div>
             <div id="content1" style="display: none;">
                 contenido del div escondido<br/>
@@ -252,7 +254,9 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador3" for="field_investigador3">Investigador 3</label>
-                    <select class="form-control" id="field_investigador3" name="investigador3" ng-model="vm.tesis.investigador3" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                    <select class="form-control" id="field_investigador3" name="investigador3" ng-model="vm.tesis.investigador3" ng-options="investigador as investigador.id +
+                    investigador.nombre + investigador.apellido1 + investigador.apellido2
+                    for investigador in vm.investigadors track by investigador.id">
                         <option value=""></option>
                     </select>
                 </div>
@@ -263,11 +267,11 @@
                             <option value=""></option>
                         </select>
                     </div>
-                </div>
+                <!-- </div>
                 <div class="class col-md-2">
                     <b>¿Es externo?</b>
                     <input type="checkbox" name="check2" id="check2" value="1" onchange="javascript:showContent()" />
-                </div>
+                </div> -->
             </div>
             <div id="content2" style="display: none;">
                 contenido del div escondido<br/>
@@ -279,7 +283,9 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador4" for="field_investigador4">Investigador 3</label>
-                    <select class="form-control" id="field_investigador4" name="investigador4" ng-model="vm.tesis.investigador4" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                    <select class="form-control" id="field_investigador4" name="investigador4" ng-model="vm.tesis.investigador4" ng-options="investigador as investigador.id +
+                    investigador.nombre + investigador.apellido1 + investigador.apellido2
+                    for investigador in vm.investigadors track by investigador.id">
                         <option value=""></option>
                     </select>
                 </div>
@@ -291,10 +297,10 @@
                         </select>
                     </div>
                 </div>
-                <div class="class col-md-2">
+                <!-- <div class="class col-md-2">
                     <b>¿Es externo?</b>
                     <input type="checkbox" name="check3" id="check3" value="1" onchange="javascript:showContent()" />
-                </div>
+                </div> -->
             </div>
             <div id="content3" style="display: none;">
                 contenido del div escondido<br/>
@@ -306,7 +312,9 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador5" for="field_investigador5">Investigador 3</label>
-                    <select class="form-control" id="field_investigador5" name="investigador5" ng-model="vm.tesis.investigador5" ng-options="investigador as investigador.id for investigador in vm.investigadors track by investigador.id">
+                    <select class="form-control" id="field_investigador5" name="investigador5" ng-model="vm.tesis.investigador5" ng-options="investigador as investigador.id +
+                    investigador.nombre + investigador.apellido1 + investigador.apellido2
+                    for investigador in vm.investigadors track by investigador.id">
                         <option value=""></option>
                     </select>
                 </div>
@@ -318,10 +326,10 @@
                         </select>
                     </div>
                 </div>
-                <div class="class col-md-2">
+                <!-- <div class="class col-md-2">
                     <b>¿Es externo?</b>
                     <input type="checkbox" name="check4" id="check4" value="1" onchange="javascript:showContent()" />
-                </div>
+                </div> -->
             </div>
             <div id="content4" style="display: none;">
                 contenido del div escondido<br/>
