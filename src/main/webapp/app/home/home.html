@@ -5,16 +5,15 @@
                 <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
                     You are logged in as user "{{vm.account.login}}".
                 </div>
+                
             </div>
         </div>
         <div class="col-md-12">
+            <h1>Borges</h1>
             <!-- <h1 data-translate="home.title">Welcome, Java Hipster!</h1>
             <p class="lead" data-translate="home.subtitle">This is your homepage</p> -->
-            <div class="col-md-1">
-                
-             
-            </div>
-            <div class="col-md-10">
+           
+            <div class="col-md-11">
                 <img src="content\images\biblioteca-babel-1.jpg"  >
                 <!-- <img src="content\images\hipster.png"  > -->
                 
@@ -58,7 +57,7 @@
         <h1 class="text-center">ALUMNO</h1>
     </div>
     <div ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER">
-        <h1 class="text-center">USER</h1>
+        <h1 class="text-center">ALUMNO</h1>
     </div>
     <div ng-class="{active: vm.$state.includes('admin')}"   has-authority="ROLE_ADMIN">
         <h1 class="text-center">ADMIN</h1>

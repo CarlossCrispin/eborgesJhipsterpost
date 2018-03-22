@@ -27,16 +27,16 @@
             "grado": "Grado",
             "departamento": "Departamento",
             "unidad": "Unidad",
-            "investigador1": "Investigador 1",
-            "tipoasesor1": "Tipo asesor 1",
-            "investigador2": "Investigador 2",
-            "tipoasesor2": "Tipo asesor 2",
-            "investigador3": "Investigador 3",
-            "tipoasesor3": "Tipo asesor 3",
-            "investigador4": "Investigador 4",
-            "tipoasesor4": "Tipo asesor 4",
-            "investigador5": "Investigador 5",
-            "tipoasesor5": "Tipo asesor 5"
+            "investigador1": "Director",
+            "tipoasesor1": "Tipo asesor ",
+            "investigador2": "Codirector 1",
+            "tipoasesor2": "Tipo asesor ",
+            "investigador3": "Codirector 2",
+            "tipoasesor3": "Tipo asesor ",
+            "investigador4": "Codirector 3",
+            "tipoasesor4": "Tipo asesor ",
+            "investigador5": "Codirector 4",
+            "tipoasesor5": "Tipo asesor "
         }
     }
 }

@@ -3,7 +3,7 @@
         "investigador" : {
             "home": {
                 "title": "Investigadores",
-                "createLabel": "Crear nuevo Investigador",
+                "createLabel": "Ingresar nuevo Investigador",
                 "createOrEditLabel": "Crear o editar Investigador",
                 "search": "Search for Investigador"
             },
