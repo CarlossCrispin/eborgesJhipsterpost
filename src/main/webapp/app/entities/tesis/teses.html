@@ -66,7 +66,7 @@
             </thead>
             <tbody  >
                
-                <tr ng-repeat="tesis in vm.teses track by tesis.id"   ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER" ng-if="tesis.id == 1001">
+                <tr ng-repeat="tesis in vm.teses track by tesis.id"   ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER" ng-if="tesis.id === 1001">
                         <!-- <td><a ui-sref="tesis-detail({id:tesis.id})">{{tesis.id}}</a></td> -->
                         <td >{{tesis.titulodetesis}}</td>
                         <!-- <td>{{tesis.fechadepublicacion | date:'medium'}}</td> -->

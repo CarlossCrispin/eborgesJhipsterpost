@@ -32,7 +32,7 @@
     <!-- <page-ribbon></page-ribbon> -->
     <div ui-view="navbar" ng-cloak></div>
 
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
+    <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
         <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-home"></span>
         </a>
@@ -92,11 +92,42 @@
            <span class="glyphicon glyphicon-header"></span>&nbsp;
            <span id = "lblcompany" data-translate="global.menu.entities.company">Company</span>
        </a>
-        -->
+        
       
-   </div>
-
-   <div id="main" style="margin-left:5%">        
+   </div> -->
+   
+   <section id="about">
+        
+        <link rel="stylesheet" href="../../../content/css/hexa.css">
+        <div class='hexagon'>
+            <ul class="hexa">
+                <li class='polygon_top'>
+                    <a  ui-sref="home"   ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-home">  home</span>
+                    </a>
+                
+                </li>
+                <li class='polygon_top'></li>
+                <li class='polygon_top'>
+                <a href="#">Dribbble</a>
+                </li>
+                <li class='polygon_bottom'>
+                <a href="#">Forrst</a>
+                </li>
+                <li class='polygon_bottom'></li>
+                <li class='polygon_bottom'>
+                <a href="#">Twitter</a>
+                </li>
+            </ul>
+            <br>
+            <br>
+            <h2>menú</h2>
+        </div>
+        <br>
+        <br>
+      
+    </section>
+   <div id="main" >        
         <div class="container">  
             <div class="well" ui-view="content">
                 
@@ -111,23 +142,15 @@
     <script>
         habilita(false);
         function w3_taggle(){
-            if(document.getElementById("main").style.marginLeft == "5%" 
-                || document.getElementById("main").style.marginLeft == "" ){
-                    // document.getElementsByClassName("etiquetaMenu").style.display = 'block';
+            
                 document.getElementById("main2").style.marginLeft = "20%";
                 document.getElementById("main").style.marginLeft = "20%";
                 document.getElementById("mySidebar").style.width = "20%";
                 document.getElementById("mySidebar").style.display = "block";
                 // document.getElementById("openNav").style.display = 'none';
-                habilita(true);
-            }else{
-                // document.getElementsByClassName("etiquetaMenu").style.display = 'none';
-                document.getElementById("main2").style.marginLeft = "5%";
-                document.getElementById("main").style.marginLeft = "5%";
-                document.getElementById("mySidebar").style.width = "5%";
-                // document.getElementById("openNav").style.display = "inline-block";
-                habilita(false);
-            }
+                
+                
+            
         }
 
         function habilita(valor){

@@ -1,9 +1,16 @@
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+body{
+	font-family: 'Roboto', sans-serif, arial;
+	font-size: 16px;
+	position: relative;
+	overflow-x: hidden;
+	/* background-image:url("http://www.belardiarredamenti.it/wp-content/uploads/2015/06/scrivanie-deck-estel-vetrina-1024x768.jpg"); 
+	background-image:url("http://img.edilportale.com/products/prodotti-145459-rel12071ab82bac45a7a55d7ab740c143b9.jpg");*/
+	background-image:url("https://i.pinimg.com/originals/3e/f2/a1/3ef2a16941be69fcbbc20c409abbe629.jpg");
+	background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	
 }
-
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */

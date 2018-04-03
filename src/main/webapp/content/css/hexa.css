@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+ body {
+  background: #404853;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+} 
+/* body{
+	font-family: 'Roboto', sans-serif, arial;
+	font-size: 16px;
+	position: relative;
+	overflow-x: hidden;
+	background-image:url("http://www.belardiarredamenti.it/wp-content/uploads/2015/06/scrivanie-deck-estel-vetrina-1024x768.jpg"); 
+	background-image:url("http://img.edilportale.com/products/prodotti-145459-rel12071ab82bac45a7a55d7ab740c143b9.jpg");
+	background-image:url("https://i.pinimg.com/originals/3e/f2/a1/3ef2a16941be69fcbbc20c409abbe629.jpg");
+	background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	
+} */
+
+ul.hexa {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*=================================== container 
+*/
+
+.hexagon {
+  position: fixed;
+  z-index: 1;
+  
+  top: 50%;
+  left: 90%;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: 60px;
+  transform-origin: center;
+  transform: scale(1.00005); /* hack Firefox smooth edge */
+}
+
+/*=================================== top and bottom triangle
+*/
+
+.polygon_top,
+.polygon_bottom {
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: width 0.3s ease-in-out, border 0.1s linear, border-radius 0.5s ease-in-out;
+}
+
+.polygon_top a,
+.polygon_bottom a {
+  color: rgba(55, 55, 55, 0);
+  display: block;
+  font-size: 0em;
+  text-transform: uppercase;
+  width: 100%;
+  transition: color, font-size 0.3s;
+}
+
+.polygon_top:nth-child(1),
+.polygon_top:nth-child(3),
+.polygon_bottom:nth-child(4),
+.polygon_bottom:nth-child(6) {
+  cursor: pointer;
+}
+
+.polygon_top:nth-child(1):hover > a,
+.polygon_top:nth-child(3):hover > a,
+.polygon_bottom:nth-child(4):hover > a,
+.polygon_bottom:nth-child(6):hover > a {
+  color: #373737;
+  font-size: 1em;
+}
+
+.polygon_top:nth-child(1) {
+  border-bottom: 30px solid #009383;
+  right: 0;
+  transform: translateX(-30px) translateY(-15px);
+}
+
+.polygon_top:nth-child(1):hover {
+  border-radius: 4px 0 0 4px;
+  border-left: 18px solid #009383;
+  width: 120px;
+  z-index: 100;
+}
+.polygon_top:nth-child(1) > a {
+  line-height: 30px;
+}
+
+.polygon_top:nth-child(2) {
+  border-bottom: 30px solid  #39d8c5;
+  transform: translateX(12px) translateY(15px);
+}
+
+.polygon_top:nth-child(3) {
+  border-bottom: 30px solid #40d4c3;
+  left: 0;
+  transform: translateX(30px) translateY(-15px);
+}
+
+.polygon_top:nth-child(3):hover {
+  border-radius: 0 4px 4px 0;
+  border-right: 18px solid #40d4c3;
+  width: 120px;
+  z-index: 100;
+}
+
+.polygon_top:nth-child(3) > a {
+  text-align: right;
+  line-height: 30px;
+}
+
+.polygon_bottom:nth-child(4) {
+  border-top: 30px solid #82fdef;
+  right: 0;
+  transform: translateX(-30px) translateY(15px);
+}
+
+.polygon_bottom:nth-child(4):hover {
+  border-radius: 4px 0 0 4px;
+  border-left: 18px solid #82fdef;
+  width: 120px;
+  z-index: 100;
+}
+
+.polygon_bottom:nth-child(4) > a {
+  text-align: left;
+  line-height: 30px;
+  margin-top: -30px;
+}
+
+.polygon_bottom:nth-child(5) {
+  border-top: 30px solid #00c6b0;
+  transform: translateX(12px) translateY(-15px);
+}
+
+.polygon_bottom:nth-child(6) {
+  border-top: 30px solid #39d8c5;
+  transform: translateX(30px) translateY(15px);
+}
+
+.polygon_bottom:nth-child(6):hover {
+  border-radius: 0 4px 4px 0;
+  border-right: 18px solid #39d8c5;
+  width: 120px;
+  z-index: 100;
+}
+
+.polygon_bottom:nth-child(6) > a {
+  text-align: right;
+  line-height: 30px;
+  margin-top: -30px;
+}
+

@@ -44,7 +44,7 @@
 </script>
 
 <form name="editForm" role="form" novalidate ng-submit="vm.save()">
-
+    
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
@@ -116,12 +116,8 @@
                 <option value=""></option>
             </select>
         </div>
-        <div class="form-group">
-            <label data-translate="eBorgesApp.tesis.departamento" for="field_departamento">Departamento</label>
-            <select class="form-control" id="field_departamento" name="departamento" ng-model="vm.tesis.departamento" ng-options="departamento as departamento.ndepartamento for departamento in vm.departamentos track by departamento.id">
-                <option value=""></option>
-            </select>
-        </div>
+        
+
         <div class="form-group">
             <label data-translate="eBorgesApp.tesis.unidad" for="field_unidad">Unidad</label>
             <select class="form-control" id="field_unidad" name="unidad" ng-model="vm.tesis.unidad" ng-options="unidad as unidad.nunidad for unidad in vm.unidads track by unidad.id">
@@ -129,19 +125,41 @@
             </select>
         </div>
         <div class="form-group">
+            <label data-translate="eBorgesApp.tesis.departamento" for="field_departamento">Departamento</label>
+            <select class="form-control" id="field_departamento" name="departamento" ng-model="vm.tesis.departamento" ng-options="departamento as departamento.ndepartamento for departamento in vm.departamentos track by departamento.id">
+                <option  value=""></option>
+            </select>
+        </div>
+        <div class="form-group" >
             <div class="class col-md-12">
-                <div class="class col-md-7">
+                <div class="class col-md-7" >
+                    <!-- <h1 ng-if="vm.tesis.departamento.ndepartamento === 'Física'"> entrooooo</h1> -->
                     <label data-translate="eBorgesApp.tesis.investigador1" for="field_investigador1">Investigador 1</label>
-                    <select  class="form-control" id="field_investigador1" name="investigador1" ng-model="vm.tesis.investigador1" ng-options="investigador as investigador.id +
+                    
+                    <!-- <select   ng-switch="vm.tesis.departamento" class="form-control" id="field_investigador1" name="investigador1" ng-model="vm.tesis.investigador1" ng-options="investigador as investigador.departamento.ndepartamento + investigador.id +
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id">
-                        <option value=""></option>
+                
+                investigador.departamento.ndepartamento
+                
+                -->
+                <!-- ng-if="investigador.departamento.ndepartamento === vm.tesis.departamento.ndepartamento" -->
+                 
+                    <select  ng-disabled="!vm.tesis.departamento"  class="form-control" id="field_investigador1" name="investigador1" ng-model="vm.tesis.investigador1"  
+                    ng-options="investigador as investigador.departamento.ndepartamento  for investigador in vm.investigadors track by investigador.id " >
+                        <option  value="" ></option>
                     </select>
+                   
                 </div>
+
+
+                <!-- termina -->
+
+
                 <div class="clas col-md-3">
                     <div class="form-group">
                         <label data-translate="eBorgesApp.tesis.tipoasesor1" for="field_tipoasesor1">Tipoasesor 1</label>
-                        <select class="form-control" id="field_tipoasesor1" name="tipoasesor1" ng-model="vm.tesis.tipoasesor1" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
+                        <select   class="form-control" id="field_tipoasesor1" name="tipoasesor1" ng-model="vm.tesis.tipoasesor1" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id">
                             <option value=""></option>
                         </select>
                     </div>

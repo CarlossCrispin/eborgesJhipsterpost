@@ -1,3 +1,88 @@
+
+<!-- <link rel="stylesheet", type='text/css', href="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.css"> -->
+<!-- <link type='text/javascript',  href="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.js"> -->
+<!-- color #009383 -->
+<link rel="stylesheet" href="../../../bower_components/dynatable/jquery.dynatable.css">
+
+<link type='text/javascript'  href="../../../bower_components/dynatable/jquery.dynatable.js">
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css"/>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+
+
+
+<script type='text/javascript' src="tabla.js"></script>
+<!-- <div ng-init="friends = [{name:'John', phone:'555-1276'},
+                         {name:'Mary', phone:'800-BIG-MARY'},
+                         {name:'Mike', phone:'555-4321'},
+                         {name:'Adam', phone:'555-5678'},
+                         {name:'Julie', phone:'555-8765'},
+                         {name:'Juliette', phone:'555-5678'}]"></div> -->
+
+<label>Search: <input ng-model="searchText"></label>
+<table id="local">
+  <tr><th>Name</th><th>Phone</th></tr>
+  <tr ng-repeat="investigador in vm.investigadors  | filter:searchText">
+    <td><a ui-sref="investigador-detail({id:investigador.id})">{{investigador.id}}</a></td>
+    <td>{{investigador.nombre}}</td>
+    <td>{{investigador.apellido1}}</td>
+  <tr ng-repeat="friend in friends | filter:searchText">
+    <td>{{friend.name}}</td>
+    <td>{{friend.phone}}</td>
+  </tr>
+</table>
+<hr>
+<!-- <label>Any: <input ng-model="search.$"></label> <br>
+<label>Name only <input ng-model="search.name"></label><br>
+<label>Phone only <input ng-model="search.phone"></label><br>
+<label>Equality <input type="checkbox" ng-model="strict"></label><br>
+<table id="searchObjResults">
+  <tr><th>Name</th><th>Phone</th></tr>
+  <tr ng-repeat="friendObj in friends | filter:search:strict">
+    <td>{{friendObj.name}}</td>
+    <td>{{friendObj.phone}}</td>
+  </tr>
+</table> -->
+
+
+
+
+
+    <table id="local" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Hobby</th>
+            <th>Favorite Music</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Fred</td>
+            <td>Roller Skating</td>
+            <td>Disco</td>
+            </tr>
+            <tr>
+            <td>Helen</td>
+            <td>Rock Climbing</td>
+            <td>Alternative</td>
+            </tr>
+            <tr>
+            <td>Glen</td>
+            <td>Traveling</td>
+            <td>Classical</td>
+            </tr>
+        </tbody>
+    </table>
+
 <div>
     <h2 data-translate="eBorgesApp.investigador.home.title">Investigadors</h2>
     <jhi-alert></jhi-alert>
@@ -14,9 +99,9 @@
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'eBorgesApp.investigador.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="searchText" id="searchQuery" placeholder="{{ 'eBorgesApp.investigador.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
-                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                            <button class="btn btn-succes" ng-click="vm.search(vm.searchQuery)">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>
@@ -31,8 +116,9 @@
         </div>
     </div>
     <br/>
+    <!-- <label>Search: <input ng-model="searchText"></label> -->
     <div class="table-responsive">
-        <table class="jh-table table table-striped">
+        <table class="jh-table table table-striped table-bordered">
             <thead>
                 <tr>
                     <th><span data-translate="global.field.id">ID</span></th>
@@ -47,7 +133,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="investigador in vm.investigadors track by investigador.id">
+                <!-- <tr ng-repeat="investigador in vm.investigadors track by investigador.id | filter:searchText"></tr> -->
+                <tr ng-repeat="investigador in vm.investigadors  | filter:searchText">
                     <td><a ui-sref="investigador-detail({id:investigador.id})">{{investigador.id}}</a></td>
                     <td>{{investigador.nombre}}</td>
                     <td>{{investigador.apellido1}}</td>
@@ -89,3 +176,4 @@
         </table>
     </div>
 </div>
+
