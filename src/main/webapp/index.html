@@ -22,7 +22,8 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
     <!-- dependencia del sidebar stylo -->
-    
+    <link rel="stylesheet" href="../../../content/css/hexa.css">
+    <!-- exagono stilo -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body class="skin-blue" ng-app="eBorgesApp" ng-strict-di>
@@ -95,10 +96,26 @@
         
       
    </div> -->
-   
+   <div id="banner">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="headings">
+                    <div class="header-content-inner">
+                        <!-- <h2>Bienvenido</h2> -->
+                        <br>
+                        <br>
+                        <br>
+                        <hr>
+
+                        <!-- <h3>Hello texto.</h3> -->
+                        <!-- <a class="scroll page-scroll" href="#about">Scroll Down! ▼</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
    <section id="about">
-        
-        <link rel="stylesheet" href="../../../content/css/hexa.css">
         <div class='hexagon'>
             <ul class="hexa">
                 <li class='polygon_top'>
@@ -109,14 +126,26 @@
                 </li>
                 <li class='polygon_top'></li>
                 <li class='polygon_top'>
-                <a href="#">Dribbble</a>
+                    <a  ui-sref="tesis" ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-pencil">  Tesis</span>&nbsp;
+                       
+                    </a>
                 </li>
                 <li class='polygon_bottom'>
-                <a href="#">Forrst</a>
+                    <a  ui-sref="settings" ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-user">  Perfil</span>&nbsp;
+                        
+                    </a>
                 </li>
                 <li class='polygon_bottom'></li>
                 <li class='polygon_bottom'>
-                <a href="#">Twitter</a>
+                    <!-- <a href="" ng-click="vm.logout()" id="logout">
+                        <span class="glyphicon glyphicon-log-out">  Salir</span>&nbsp;
+                    </a> -->
+                    <!-- <a ng-click="vm.logout()" >
+                        <span class="glyphicon glyphicon-log-out"></span>&nbsp;
+                        <span data-translate="global.menu.account.logout">Sign out</span>
+                    </a> -->
                 </li>
             </ul>
             <br>
@@ -127,6 +156,7 @@
         <br>
       
     </section>
+
    <div id="main" >        
         <div class="container">  
             <div class="well" ui-view="content">
@@ -144,10 +174,11 @@
         function w3_taggle(){
             
                 document.getElementById("main2").style.marginLeft = "20%";
+                document.getElementById("banner").style.marginLeft = "20%";
                 document.getElementById("main").style.marginLeft = "20%";
                 document.getElementById("mySidebar").style.width = "20%";
                 document.getElementById("mySidebar").style.display = "block";
-                // document.getElementById("openNav").style.display = 'none';
+                document.getElementById("openNav").style.display = 'none';
                 
                 
             
