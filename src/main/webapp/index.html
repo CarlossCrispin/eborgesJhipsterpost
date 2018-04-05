@@ -17,158 +17,197 @@
     <!-- endbuild -->
     <!-- build:css content/css/main.css -->
     <link rel="stylesheet" href="content/css/vendor.css">
+    <link rel="stylesheet" href="content/css/index.css">
     <!-- <link rel="stylesheet" href="content/css/main.css"> -->
     <!-- endbuild -->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
     <!-- dependencia del sidebar stylo -->
-    <link rel="stylesheet" href="../../../content/css/hexa.css">
+    <link rel="stylesheet" href="content/css/hexa.css">
     <!-- exagono stilo -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body class="skin-blue" ng-app="eBorgesApp" ng-strict-di>
+<body  ng-app="eBorgesApp" ng-strict-di>
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- <page-ribbon></page-ribbon> -->
+    
     <div ui-view="navbar" ng-cloak></div>
-
-    <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
-        <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
-            <span class="glyphicon glyphicon-home"></span>
-        </a>
+    <!-- <div id="scene">
+        <div class="background layer" data-depth="0.20">
+          <img src="http://sun-surfer.com/photos/2013/03/Cobblestone-Street-Alsace-France.jpg"/>
+        </div>
+        <div class="links layer" data-depth="0.80">
+          <ul>
+            <li class="hexagon" id="home">
+              <a href="#">
+                <svg version="1.1" viewBox="0 0 600 516.8">
+                  <polygon points="150.7,516.8 1.5,258.4 150.7,0 449,0 598.2,258.4 449,516.8 "/>
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="hexagon dropdown" id="about">
+              <a href="#">
+                <svg version="1.1" viewBox="0 0 600 516.8">
+                  <polygon points="150.7,516.8 1.5,258.4 150.7,0 449,0 598.2,258.4 449,516.8 "/>
+                </svg>
+                <span>About</span>
+              </a>
+              <ul class="sub-nav">
+                  <li>
+                    <a href="#">The Artist</a>
+                  </li>
+                  <li>
+                    <a href="#">The Work</a>
+                  </li>
+                </ul>
+            </li>
+            <li class="hexagon dropdown" id="contact">
+              <a href="#">
+                <svg version="1.1" viewBox="0 0 600 516.8">
+                  <polygon points="150.7,516.8 1.5,258.4 150.7,0 449,0 598.2,258.4 449,516.8 "/>
+                </svg>
+                <span>Contact</span>
+              </a>
+              <ul class="sub-nav">
+                <li>
+                  <a href="#">E-mail</a>
+                </li>
+                <li>
+                  <a href="#">Facebook</a>
+                </li>
+                <li>
+                  <a href="#">Twitter</a>
+                </li>
+                <li>
+                  <a href="#">Dribbble</a>
+                </li>
+                <li>
+                  <a href="#">Codepen</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hexagon dropdown" id="work">
+              <a href="#">
+                <svg version="1.1" viewBox="0 0 600 516.8">
+                  <polygon points="150.7,516.8 1.5,258.4 150.7,0 449,0 598.2,258.4 449,516.8 "/>
+                </svg>
         
-        <a class="w3-bar-item w3-button" ui-sref="tesis" ng-click="vm.collapseNavbar()">
-            <span class="glyphicon glyphicon-pencil"></span>&nbsp;
-            <span id="lbtesis" data-translate="global.menu.entities.tesis" class="etiquetaMenu">Tesis</span>
-        </a>
-       
-        <a class="w3-bar-item w3-button"   ui-sref="settings" ng-click="vm.collapseNavbar()">
-            <span class="glyphicon glyphicon-user"></span>&nbsp;
-            <span id = "lbsettings" data-translate="global.menu.account.settings" class="etiquetaMenu">Perfil</span>
-        </a>
-        
-            <a  class="w3-bar-item w3-button"  ui-sref="password" ng-click="vm.collapseNavbar()">
-                <span class="glyphicon glyphicon-lock"></span>&nbsp;
-                <span  id = "lbPassword" data-translate="global.menu.account.password">Password</span>
-            </a>
-            <a  class="w3-bar-item w3-button"  ui-sref="investigador" ng-click="vm.collapseNavbar()">
-                <span class="glyphicon glyphicon-education"></span>&nbsp;
-                <span  id = "lbInvestigador" data-translate="global.menu.entities.investigador">Investigador</span>
-            </a>
-        
-        <!-- <li class="w3-bar-item w3-button" ui-sref-active="active" ng-switch-when="true" ng-click="vm.collapseNavbar()">
-            <a  href="" ng-click="vm.logout()" id="logout">
-                <span class="glyphicon glyphicon-log-out"></span>&nbsp;
-                <span data-translate="global.menu.account.logout">Sign out</span>
-            </a>
-        </li>
-        <li ui-sref-active="active" ng-switch-when="false">
-            <a href="" ng-click="vm.login()" id="login">
-                <span class="glyphicon glyphicon-log-in"></span>&nbsp;
-                <span data-translate="global.menu.account.login">Sign in</span>
-            </a>
-        </li>
-        <li ui-sref-active="active" ng-switch-when="false">
-            <a ui-sref="register" ng-click="vm.collapseNavbar()">
-                <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-                <span data-translate="global.menu.account.register">Register</span>
-            </a>
-        </li>
-       -->
-        
-       <!-- <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-           <span id = "lblmedic" data-translate="global.menu.entities.medic">Medic</span>
-       </a>
-       <a class="w3-bar-item w3-button" ui-sref="nurse" ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-heart"></span>&nbsp;
-           <span id = "lblnurse" data-translate="global.menu.entities.nurse">Nurse</span>
-       </a>
-       <a class="w3-bar-item w3-button" ui-sref="reports"  ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-file"></span>&nbsp;
-           <span id = "lblreports" data-translate="global.menu.entities.reports">Reports</span>
-       </a>
-       <a class="w3-bar-item w3-button" ui-sref="company" ng-click="vm.collapseNavbar()">
-           <span class="glyphicon glyphicon-header"></span>&nbsp;
-           <span id = "lblcompany" data-translate="global.menu.entities.company">Company</span>
-       </a>
-        
-      
-   </div> -->
-   <div id="banner">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="headings">
-                    <div class="header-content-inner">
-                        <!-- <h2>Bienvenido</h2> -->
-                        <br>
-                        <br>
-                        <br>
-                        <hr>
-
-                        <!-- <h3>Hello texto.</h3> -->
-                        <!-- <a class="scroll page-scroll" href="#about">Scroll Down! ▼</a> -->
+                <span>Work</span>
+              </a>
+              <ul class="sub-nav">
+                <li>
+                  <a href="#">Print</a>
+                </li>
+                <li>
+                  <a href="#">Design</a>
+                </li>
+                <li>
+                  <a href="#">Code</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js'></script>
+    <div id="particles-js">
+        <div id="banner">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="headings">
+                        <div class="header-content-inner">
+                            <!-- <h2>Bienvenido</h2> -->
+                            <br>
+                            <br>
+                            <br>
+                            <!-- <hr> -->
+                           
+                            <!-- <h3>Hello texto.</h3> -->
+                            <!-- <a class="scroll page-scroll" href="#about">Scroll Down! ▼</a> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-   <section id="about">
-        <div class='hexagon'>
-            <ul class="hexa">
-                <li class='polygon_top'>
-                    <a  ui-sref="home"   ng-click="vm.collapseNavbar()">
-                        <span class="glyphicon glyphicon-home">  home</span>
-                    </a>
-                
-                </li>
-                <li class='polygon_top'></li>
-                <li class='polygon_top'>
-                    <a  ui-sref="tesis" ng-click="vm.collapseNavbar()">
-                        <span class="glyphicon glyphicon-pencil">  Tesis</span>&nbsp;
-                       
-                    </a>
-                </li>
-                <li class='polygon_bottom'>
-                    <a  ui-sref="settings" ng-click="vm.collapseNavbar()">
-                        <span class="glyphicon glyphicon-user">  Perfil</span>&nbsp;
-                        
-                    </a>
-                </li>
-                <li class='polygon_bottom'></li>
-                <li class='polygon_bottom'>
-                    <!-- <a href="" ng-click="vm.logout()" id="logout">
-                        <span class="glyphicon glyphicon-log-out">  Salir</span>&nbsp;
-                    </a> -->
-                    <!-- <a ng-click="vm.logout()" >
-                        <span class="glyphicon glyphicon-log-out"></span>&nbsp;
-                        <span data-translate="global.menu.account.logout">Sign out</span>
-                    </a> -->
-                </li>
-            </ul>
-            <br>
-            <br>
-            <h2>menú</h2>
-        </div>
-        <br>
-        <br>
-      
-    </section>
-
-   <div id="main" >        
-        <div class="container">  
-            <div class="well" ui-view="content">
-                
+        
+        <section id="about">
+            <div class='hexagon'>
+                <ul class="hexa">
+                    <li class='polygon_top'>
+                        <a  ui-sref="home"   ng-click="vm.collapseNavbar()">
+                            <span class="glyphicon glyphicon-home">  home</span>
+                        </a>
+                    
+                    </li>
+                    <li class='polygon_top'></li>
+                    <li class='polygon_top'>
+                        <a  ui-sref="tesis" ng-click="vm.collapseNavbar()">
+                            <span class="glyphicon glyphicon-pencil">  Tesis</span>&nbsp;
+                            
+                        </a>
+                    </li>
+                    <li class='polygon_bottom'>
+                        <a  ui-sref="settings" ng-click="vm.collapseNavbar()">
+                            <span class="glyphicon glyphicon-user">  Perfil</span>&nbsp;
+                            
+                        </a>
+                    </li>
+                    <li class='polygon_bottom'></li>
+                    <li class='polygon_bottom'>
+                        <!-- <a href="" ng-click="vm.logout()" id="logout">
+                            <span class="glyphicon glyphicon-log-out">  Salir</span>&nbsp;
+                        </a> -->
+                        <!-- <a ng-click="vm.logout()" >
+                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;
+                            <span data-translate="global.menu.account.logout">Sign out</span>
+                        </a> -->
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <!-- <h1>menú</h1> -->
+                <span></span>
+                <br>
+                <br>
             </div>
-            <div class="main-footer" ng-cloak>
-                <div class="text-center">
-                    <p data-translate="footer">"Copyright &copy; 2017-2018 Biti All rights reserved"</p>
+            <br>
+            <br>
+            
+        </section>
+        
+            
+            
+            
+        <div id="main" >        
+            <div class="container">  
+                <div class="well" ui-view="content">
+                    
                 </div>
+                <div class="main-footer" ng-cloak>
+                    <div class="text-center">
+                        <p data-translate="footer">"Copyright &copy; 2017-2018 Biti All rights reserved"</p>
+                        <div class="visit"><a href="" target="_blank">---> Carlos Crispin  !</a></div>
+                    </div>
+                </div>
+                <div class="footer">
+                        <p>Made using the awesome 
+                            <a href="https://github.com/VincentGarreau/particles.js/">Particles.js</a>, 
+                            <a href="http://cpv2api.com/">Codepen V2 API</a> & 
+                            <a href="http://getskeleton.com/">Skeleton.css</a></p> 
+                    </div>
             </div>
         </div>
+        
     </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+          
+            
+    
+   
     <script>
         habilita(false);
         function w3_taggle(){
@@ -183,34 +222,6 @@
                 
             
         }
-
-        function habilita(valor){
-            if(valor){
-                // document.getElementById("lblreservation").style.display = "inline-block";
-                // document.getElementById("lblpacient").style.display = "inline-block";
-                // document.getElementById("lblmedic").style.display = "inline-block";
-                // document.getElementById("lblnurse").style.display = "inline-block";
-                // document.getElementById("lblreports").style.display = "inline-block";
-                // document.getElementById("lblcompany").style.display = "inline-block";
-                document.getElementById("lbtesis").style.display = "inline-block";
-                document.getElementById("lbsettings").style.display = "inline-block";
-                document.getElementById("lbPassword").style.display = "inline-block";
-                document.getElementById("lbInvestigador").style.display = "inline-block";
-            }else{
-                // document.getElementById("lblreservation").style.display = "none";
-                // document.getElementById("lblpacient").style.display = "none";
-                // document.getElementById("lblmedic").style.display = "none";
-                // document.getElementById("lblnurse").style.display = "none";
-                // document.getElementById("lblreports").style.display = "none";
-                document.getElementById("lbtesis").style.display = "none";
-                document.getElementById("lbsettings").style.display = "none";
-                document.getElementById("lbPassword").style.display = "none";
-                document.getElementById("lbInvestigador").style.display = "none";
-                
-                
-            }
-        }
-
     </script>
 
     <noscript>
@@ -233,8 +244,9 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>-->
-
+    </script> -->
+    <script src="content/js/index.js"></script>
+    
     <!-- build:js app/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
