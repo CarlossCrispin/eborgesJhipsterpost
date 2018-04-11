@@ -184,20 +184,26 @@ BODY {
 #main{
   /* opacity: 0.5; */
 }
+h1{
+  color: #fff
+}
+p{
+  color: rgb(253, 253, 255)
+}
 canvas {
   height: 100vh;
   z-index: -10;
   position: fixed;
   top: 0px;
 }
-
-/* a {
+ /* a {
   color: #bbbbc4;
   text-decoration: none;
   -webkit-transition: .5s;
   transition: .5s;
-}
+} */
 
+/*
 a:hover {
   color: #fc3565;
 }
@@ -253,7 +259,7 @@ padding-top:5rem;
 }
 
 .visit{
-  color:white;
+  color:rgb(250, 51, 184);
   font-size:12px;
   background:#32333a;;
   width:146px;

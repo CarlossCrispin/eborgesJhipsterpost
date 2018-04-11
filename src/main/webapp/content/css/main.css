@@ -11,6 +11,12 @@ body{
     background-repeat: no-repeat;
 	
 }
+h1{
+    color: #fff
+}
+p{
+    color: rgb(253, 253, 255)
+}
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -173,7 +179,7 @@ Generic styles
 make sure browsers use the pointer cursor for anchors, even with no href
 ========================================================================== */
 a {
-    color: #1c0cf5;
+    color: #ffffff;
 }
 
 a:hover, .hand, [jh-sort-by] {
