@@ -1,24 +1,23 @@
-$('#local').dynatable({
-    table: {
-      defaultColumnIdStyle: 'trimDash'
-    }
-  });
+// $('#local').dynatable({
+//     table: {
+//       defaultColumnIdStyle: 'trimDash'
+//     }
+//   });
 
-// $(document).ready( function() {
-// 	$('#local').dynatable({
-// 		table: {
-// 		  defaultColumnIdStyle: 'trimDash'
-// 		},
-// 		features: {
-// 		  paginate: true,
-// 		  search: true,
-// 		  recordCount: false,
-// 		  perPageSelect: true
-// 		},
+$(document).ready( function() {
+	$('#local').dynatable({
+		table: {
+		  defaultColumnIdStyle: 'trimDash'
+		},
+		features: {
+		  paginate: true,
+		  search: true,
+		  recordCount: false,
+		  perPageSelect: true
+		},
 		
-// 	});    	
-// });
-
+	});    	
+});
 
 // $(document).ready(function() {
 // 	$('#local').DataTable( {

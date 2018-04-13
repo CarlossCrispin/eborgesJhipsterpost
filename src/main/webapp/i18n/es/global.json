@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "e-Borges",
+        "title": "Borges",
         "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualice su navegador</a> para mejorar su experiencia.",
         "menu": {
             "home": "Inicio",
@@ -101,7 +101,7 @@
             "edit": "Editar",
             "open": "Open",
             "save": "Guardar",
-            "view": "Vista"
+            "view": "Detalles"
         },
         "detail": {
             "field": "Campo",

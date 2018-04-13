@@ -11,12 +11,7 @@ body{
     background-repeat: no-repeat;
 	
 }
-h1{
-    color: #fff
-}
-p{
-    color: rgb(253, 253, 255)
-}
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
