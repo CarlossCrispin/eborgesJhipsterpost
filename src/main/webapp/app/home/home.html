@@ -8,9 +8,10 @@
                 <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
                     You are logged in as user "{{vm.account.login}}",
                 </div>
-                <div class="alert alert-success" ng-switch-when="true"  >
+                <!-- prueba de jalar otro dato -->
+                <!-- <div class="alert alert-success" ng-switch-when="true"  >
                     You email "{{vm.account.email}}".
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="col-md-12">
@@ -20,9 +21,9 @@
                 <br>
                 <br>
                 <hr >      
-                <h3 class="text-justify">Este es el módulo de registro de tesis, tiene como objetivo el registro de tesis 
-                        , asignación de director y codirectores y la generación de actas de toma de
-                            grado de los diferentes departamentos de CINVESTAV.</h3>
+                <h3 class="text-justify">Este módulo tiene como objetivo el registro de tesis 
+                        , asignación de director , codirectores y la generación de 
+                        actas de toma de grado de los diferentes departamentos de CINVESTAV.</h3>
             </div>
                 
             <div ng-switch="vm.isAuthenticated()">
