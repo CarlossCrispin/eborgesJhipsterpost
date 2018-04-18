@@ -1,7 +1,7 @@
-<nav class=class="w3-sidebar w3-bar-block w3-card w3-animate-left" role="navigation">   
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_close()">Cerrar &times;</button>
+<nav class=class="w3-sidebar w3-bar-block w3-card w3-animate-left" role="navigation" ng-switch="vm.isAuthenticated()">   
+    <div  class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar" >
+        <button class="w3-bar-item w3-button w3-large" 
+        onclick="w3_close()" >Cerrar &times;</button>
         <!-- <a href="#" class="w3-bar-item w3-button">Link 1</a>
         <a href="#" class="w3-bar-item w3-button">Link 2</a>
         <a href="#" class="w3-bar-item w3-button">Link 3</a> -->
@@ -29,16 +29,16 @@
         </a>
     </div>
       
-    <div id="main2">
+    <div id="main2" >
       
         <div class="w3-teal">
-            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_taggle()">&#9776;</button>
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_taggle()" ng-switch-when="true">&#9776;</button>
             <div class="w3-container">
                 
                 <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
                     <ul class="pull-left">
                             <li >
-                                    <h1 class="text-select">Borges</h1>
+                                    <h1 class="text-select" >Borges</h1>
                                     
                                 </li>
                     </ul>

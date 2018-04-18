@@ -6,13 +6,44 @@
         <div class="col-md-12">
             <div ng-switch="vm.isAuthenticated()" class="text-center">
                 <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
-                    You are logged in as user "{{vm.account.login}}".
+                    You are logged in as user "{{vm.account.login}}",
                 </div>
-                
+                <div class="alert alert-success" ng-switch-when="true"  >
+                    You email "{{vm.account.email}}".
+                </div>
             </div>
         </div>
         <div class="col-md-12">
-            <ul id="hexGrid">
+           
+            <div class="jumbotron">
+                <h1 class="text-center" >Bienvenido al Módulo de Registro de Tesis</h1>
+                <br>
+                <br>
+                <hr >      
+                <h3 class="text-justify">Este es el módulo de registro de tesis, tiene como objetivo el registro de tesis 
+                        , asignación de director y codirectores y la generación de actas de toma de
+                            grado de los diferentes departamentos de CINVESTAV.</h3>
+            </div>
+                
+            <div ng-switch="vm.isAuthenticated()">
+                    <!-- <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
+                        You are logged in as user "{{vm.account.login}}".
+                    </div> -->
+                    
+                   
+<!--     
+                    <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>
+                        If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+                    </div> -->
+    
+                    <div   class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
+                        <h2 class="text-center">You don't have an account yet? </h2> <a class="alert-link" ui-sref="register">Register a new account</a>
+                    </div>
+                    
+                </div>
+            <h1></h1>
+          
+            <!-- <ul id="hexGrid">
                 <li class="hex">
                     <a class="hexIn" href="#">
                     <img src="https://historia-biografia.com/wp-content/uploads/2017/10/Sin-t%C3%ADtulo-159.jpg" alt="" />
@@ -63,7 +94,7 @@
                     </a>
                 </li>
 
-            </ul>
+            </ul> -->
             <!-- <a id="fork" target="_blank" href="https://github.com/CarlossCrispin">Carlos Crispin</a> -->
            
         </div>

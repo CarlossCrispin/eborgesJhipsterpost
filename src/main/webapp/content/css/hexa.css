@@ -28,7 +28,7 @@ li {
 hr{ 
  
   background-color:#61ebcf; 
-  max-width: 800px;
+  max-width: auto;
   border-top: 2px ;
   text-align: center;
   padding-top: 4px;

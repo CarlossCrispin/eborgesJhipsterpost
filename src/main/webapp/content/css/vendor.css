@@ -95,9 +95,7 @@ svg:not(:root) {
 figure {
   margin: 1em 40px; }
 
-hr {
-  box-sizing: content-box;
-  height: 0; }
+
 
 pre {
   overflow: auto; }
