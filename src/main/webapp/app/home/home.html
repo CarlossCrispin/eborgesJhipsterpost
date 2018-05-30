@@ -1,13 +1,21 @@
 
 <link rel="stylesheet" href="../../content/css/home.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+        $(document).ready(function()
+        {
+           $("#myModal").modal("show");
+        });
+     </script>
 <div ng-cloak class="text-select">
-
     <div class="row">
         <div class="col-md-12">
             <div ng-switch="vm.isAuthenticated()" class="text-center">
-                <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
-                    You are logged in as user "{{vm.account.login}}",
+                <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.firstName}}'}">
+                    You are logged in as user "{{vm.account.firstName}}",
                 </div>
+                
                 <!-- prueba de jalar otro dato -->
                 <!-- <div class="alert alert-success" ng-switch-when="true"  >
                     You email "{{vm.account.email}}".
@@ -15,8 +23,8 @@
             </div>
         </div>
         <div class="col-md-12">
-           
-            <div class="jumbotron">
+    
+            <!-- <div class="jumbotron">
                 <h1 class="text-center" >Bienvenido al Módulo de Registro de Tesis</h1>
                 <br>
                 <br>
@@ -24,7 +32,7 @@
                 <h3 class="text-justify">Este módulo tiene como objetivo el registro de tesis 
                         , asignación de director , codirectores y la generación de 
                         actas de toma de grado de los diferentes departamentos de CINVESTAV.</h3>
-            </div>
+            </div> -->
                 
             <div ng-switch="vm.isAuthenticated()">
                     <!-- <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
@@ -42,9 +50,31 @@
                     </div>
                     
                 </div>
-            <h1></h1>
-          
-            <!-- <ul id="hexGrid">
+   
+    <div class="container">
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Bienvenido al Módulo de Registro de Tesis</h4>
+                  </div>
+                  <div class="modal-body">
+                    <hr >  
+                    <h3 class="text-justify">Este módulo tiene como objetivo el registro de tesis,
+                         asignación de director, codirectores y la generación de 
+                            actas de toma de grado de los diferentes departamentos de CINVESTAV.</h3>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <ul id="hexGrid">
                 <li class="hex">
                     <a class="hexIn" href="#">
                     <img src="https://historia-biografia.com/wp-content/uploads/2017/10/Sin-t%C3%ADtulo-159.jpg" alt="" />
@@ -95,9 +125,9 @@
                     </a>
                 </li>
 
-            </ul> -->
+            </ul>
             <!-- <a id="fork" target="_blank" href="https://github.com/CarlossCrispin">Carlos Crispin</a> -->
-           
+            
         </div>
     </div>
 </div>

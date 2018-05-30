@@ -9,6 +9,7 @@
 
     function UserManagementDialogController ($stateParams, $uibModalInstance, entity, User, JhiLanguageService) {
         var vm = this;
+        //agregando el rol investigador al front-end
         vm.authorities = ['ROLE_USER', 'ROLE_ADMIN','ROLE_INVESTIGADOR'];
         //vm.authorities = ['ROLE_USER', 'ROLE_ADMIN'];
         vm.clear = clear;

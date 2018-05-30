@@ -31,15 +31,30 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- <link href='https://fonts.googleapis.com/css?family=Luckiest Guy', rel='stylesheet'> -->
     <!-- fuente -->
+    <link rel="stylesheet" href="content/css/modal.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
 
+  
 </head>
+
+  
 <body  ng-app="eBorgesApp" ng-strict-di>
+    
+   
+    
+  
+
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- <page-ribbon></page-ribbon> -->
     
     <div ui-view="navbar" ng-cloak></div>
+      
     <!-- <div class="visit"><a href="https://github.com/CarlossCrispin" target="_blank">Carlos Crispin  !</a></div> -->
     <!-- <div id="scene">
         <div class="background layer" data-depth="0.20">
@@ -171,9 +186,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
           
-            
-    
-   
+         
     <script>
         habilita(false);
         function w3_taggle(){
@@ -184,10 +197,7 @@
                 document.getElementById("main").style.marginLeft = "20%";
                 document.getElementById("mySidebar").style.width = "20%";
                 document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("openNav").style.display = 'none';
-                
-                
-            
+                document.getElementById("openNav").style.display = 'none';    
         }
     </script>
 
@@ -297,6 +307,7 @@
     <script src="app/entities/sinodal/sinodal.service.js"></script>
     <script src="app/entities/sinodal/sinodal.search.service.js"></script>
     <script src="app/entities/sinodal/sinodal.controller.js"></script>
+    <script src="app/entities/investigador/tabla.js"></script>
     <script src="app/entities/investigador/investigador-dialog.controller.js"></script>
     <script src="app/entities/investigador/investigador-detail.controller.js"></script>
     <script src="app/entities/investigador/investigador-delete-dialog.controller.js"></script>
