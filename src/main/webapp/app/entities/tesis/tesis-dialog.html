@@ -120,14 +120,18 @@
                     ng-model="vm.tesis.mes"
                     />
         </div> -->
-
+        
         <div class="form-group">
             <label data-translate="eBorgesApp.tesis.alumno" for="field_alumno">Alumno</label>
             <select class="form-control" id="field_alumno" name="alumno" ng-model="vm.tesis.alumno" 
-            ng-options="alumno as alumno.matricula+ alumno.nombre + alumno.apellido1 for alumno 
+            ng-options="alumno as  alumno.nombre + alumno.apellido1 + alumno.apellido2 for alumno 
             in vm.alumnos track by alumno.id" ng-disabled="vm.tesis.alumno">
                 <option value=""></option>
             </select>
+            <script>
+               $("#field_alumno option:first").val()
+            </script>
+            
         </div>
         <div class="form-group">
             <label data-translate="eBorgesApp.tesis.grado" for="field_grado">Grado</label>

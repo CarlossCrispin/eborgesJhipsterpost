@@ -96,6 +96,11 @@
         vm.account = null;
         vm.isAuthenticated = null;
         vm.login = LoginService.open;
+        
+        
+    //     $scope.alumno =  "First";
+          
+    //   vm.tesis.alumno=$scope.alumno;
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
@@ -108,19 +113,23 @@
                 vm.isAuthenticated = Principal.isAuthenticated;
             });
         }
+        
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
         });
-
+       
+        
         function clear () {
             $uibModalInstance.dismiss('cancel');
         }
 
         function save () {
+           
             vm.isSaving = true;
             if (vm.tesis.id !== null) {
                 Tesis.update(vm.tesis, onSaveSuccess, onSaveError);
             } else {
+               
                 Tesis.save(vm.tesis, onSaveSuccess, onSaveError);
             }
         }

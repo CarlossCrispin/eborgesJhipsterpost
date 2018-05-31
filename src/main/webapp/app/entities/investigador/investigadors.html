@@ -141,6 +141,9 @@
                     <td>{{investigador.apellido1}}</td>
                     <td>{{investigador.apellido2}}</td>
                     <td>{{investigador.esexterno}}</td>
+                    <!-- <td *ngIf="{{investigador.esexterno}} !== 'false'">si</td>
+                    <td *ngIf="{{investigador.esexterno}} == false">no</td> -->
+                    
                     <td>
                         <a ui-sref="genero-detail({id:investigador.genero.id})">{{investigador.genero.ngenero}}</a>
                     </td>

@@ -22,7 +22,7 @@
             
             Tesis.query(function(result) {
                 vm.teses = result;
-                vm.searchQuery = hibridos;
+                vm.searchQuery = vm.searchQuery;
             });
             // TesisSearch.query({query: 'qui es igual al id del usuario '}, function(result) {
             //     vm.teses = result;
