@@ -72,7 +72,9 @@ mark {
 
 small {
   font-size: 80%; }
-
+  p{
+    color: #000;
+}
 sub,
 sup {
   font-size: 75%;

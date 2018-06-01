@@ -125,7 +125,7 @@
             <label data-translate="eBorgesApp.tesis.alumno" for="field_alumno">Alumno</label>
             <select class="form-control" id="field_alumno" name="alumno" ng-model="vm.tesis.alumno" 
             ng-options="alumno as  alumno.nombre + alumno.apellido1 + alumno.apellido2 for alumno 
-            in vm.alumnos track by alumno.id" ng-disabled="vm.tesis.alumno">
+            in vm.alumnos track by alumno.id" >
                 <option value=""></option>
             </select>
             <script>
@@ -146,7 +146,7 @@
         <div class="form-group">
             <label data-translate="eBorgesApp.tesis.unidad" for="field_unidad">Unidad</label>
             <select class="form-control" id="field_unidad" name="unidad" ng-model="vm.tesis.unidad" 
-            ng-options="unidad as unidad.nunidad for unidad in vm.unidads track by unidad.id"  ng-disabled="vm.tesis.unidad">
+            ng-options="unidad as unidad.nunidad for unidad in vm.unidads track by unidad.id" >
                 <option value=""></option>
             </select>
         </div>
@@ -154,7 +154,7 @@
             <label data-translate="eBorgesApp.tesis.departamento" for="field_departamento">Departamento</label>
             <select class="form-control" id="field_departamento" name="departamento" ng-model="vm.tesis.departamento" 
             ng-options="departamento as departamento.ndepartamento for departamento in vm.departamentos track by departamento.id" 
-            ng-disabled="vm.tesis.departamento">
+           >
                 <option  value=""></option>
             </select>
         </div>
@@ -182,10 +182,10 @@
                     
 
                     <select class="form-control" id="field_investigador1" name="investigador1" ng-model="vm.tesis.investigador1"  
-                    ng-options="investigador as investigador.id +
+                    ng-options="investigador as 
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id "
-                    ng-disabled="vm.tesis.investigador1" >
+                    >
                         <option  value="" ></option>
                     </select>
                    
@@ -284,10 +284,10 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador2" for="field_investigador2">Investigador 2</label>
-                    <select class="form-control" id="field_investigador2" name="investigador2" ng-model="vm.tesis.investigador2" ng-options="investigador as investigador.id +
+                    <select class="form-control" id="field_investigador2" name="investigador2" ng-model="vm.tesis.investigador2" ng-options="investigador as 
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id"
-                    ng-disabled="vm.tesis.investigador2">
+                   >
                         <option value=""></option>
                     </select>
                 </div>
@@ -315,10 +315,10 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador3" for="field_investigador3">Investigador 3</label>
-                    <select class="form-control" id="field_investigador3" name="investigador3" ng-model="vm.tesis.investigador3" ng-options="investigador as investigador.id +
+                    <select class="form-control" id="field_investigador3" name="investigador3" ng-model="vm.tesis.investigador3" ng-options="investigador as 
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id"
-                    ng-disabled="vm.tesis.investigador3">
+                    >
                         <option value=""></option>
                     </select>
                 </div>
@@ -328,7 +328,7 @@
                         <select class="form-control" id="field_tipoasesor3" name="tipoasesor3" 
                         ng-model="vm.tesis.tipoasesor3"
                          ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id"
-                         ng-disabled="vm.tesis.tipoasesor3">
+                       >
                             <option value=""></option>
                         </select>
                     </div>
@@ -348,10 +348,10 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador4" for="field_investigador4">Investigador 3</label>
-                    <select class="form-control" id="field_investigador4" name="investigador4" ng-model="vm.tesis.investigador4" ng-options="investigador as investigador.id +
+                    <select class="form-control" id="field_investigador4" name="investigador4" ng-model="vm.tesis.investigador4" ng-options="investigador as 
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id"
-                    ng-disabled="vm.tesis.investigador4">
+                    >
                         <option value=""></option>
                     </select>
                 </div>
@@ -359,7 +359,7 @@
                     <div class="form-group">
                         <label data-translate="eBorgesApp.tesis.tipoasesor4" for="field_tipoasesor4">Tipoasesor 3</label>
                         <select class="form-control" id="field_tipoasesor4" name="tipoasesor4" ng-model="vm.tesis.tipoasesor4" ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id"
-                        ng-disabled="vm.tesis.tipoasesor4">
+                       >
                             <option value=""></option>
                         </select>
                     </div>
@@ -379,10 +379,10 @@
             <div class="class col-md-12">
                 <div class="class col-md-7">
                     <label data-translate="eBorgesApp.tesis.investigador5" for="field_investigador5">Investigador 3</label>
-                    <select class="form-control" id="field_investigador5" name="investigador5" ng-model="vm.tesis.investigador5" ng-options="investigador as investigador.id +
+                    <select class="form-control" id="field_investigador5" name="investigador5" ng-model="vm.tesis.investigador5" ng-options="investigador as 
                     investigador.nombre + investigador.apellido1 + investigador.apellido2
                     for investigador in vm.investigadors track by investigador.id"
-                    ng-disabled="vm.tesis.investigador5">
+                    >
                         <option value=""></option>
                     </select>
                 </div>
@@ -392,7 +392,7 @@
                         <select class="form-control" id="field_tipoasesor5" name="tipoasesor5"
                          ng-model="vm.tesis.tipoasesor5"
                           ng-options="tipoAsesor as tipoAsesor.ntipo for tipoAsesor in vm.tipoasesors track by tipoAsesor.id"
-                          ng-disabled="vm.tesis.tipoasesor5">
+                       >
                             <option value=""></option>
                         </select>
                     </div>
