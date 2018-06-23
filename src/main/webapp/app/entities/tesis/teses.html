@@ -66,7 +66,7 @@
             </thead>
             <tbody  >
                
-                <tr ng-repeat="tesis in vm.teses track by tesis.id"   ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER" ng-if="$first">
+                <tr ng-repeat="tesis in vm.teses track by tesis.id"   ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER" ng-if="vm.account.id ===tesis.alumno.id">
                         <!-- <td><a ui-sref="tesis-detail({id:tesis.id})">{{tesis.id}}</a></td> -->
                         <td >{{tesis.titulodetesis}}</td>
                         <!-- <td>{{tesis.fechadepublicacion | date:'medium'}}</td> -->
@@ -166,6 +166,28 @@
                         <a ui-sref="alumno-detail({id:tesis.alumno.id})"> {{tesis.alumno.nombre}}  
                             {{tesis.alumno.apellido1}}  {{tesis.alumno.apellido2}}</a>
                     </td>
+                    <tr ng-repeat="tesis in vm.teses track by tesis.id" ng-class="{active: vm.$state.includes('admin)}"   has-authority="ROLE_ADMIN" >
+                        <!-- <td><a ui-sref="tesis-detail({id:tesis.id})">{{tesis.id}}</a></td> -->
+                        <td >{{tesis.titulodetesis}}</td>
+                        <!-- <td>{{tesis.fechadepublicacion | date:'medium'}}</td> -->
+                        <!-- <td>{{tesis.resumen}}</td> -->
+                        <!-- <td>{{tesis.clasificacion}}</td>
+                        <td>{{tesis.clasificacion1}}</td>
+                        <td>{{tesis.anio}}</td>
+                        <td>{{tesis.mes}}</td> -->
+                        <td>
+                            <a ui-sref="grado-detail({id:tesis.grado.id})">{{tesis.grado.ngrado}}</a>
+                        </td>
+                        <td ng-class="{active: vm.$state.includes('user')}"   has-authority="ROLE_USER">
+                            <a ui-sref="investigador-detail({id:tesis.investigador1.id})">{{tesis.investigador1.nombre}}
+                                    {{tesis.investigador1.apellido1}}  {{tesis.investigador1.apellido2}}
+                            </a>
+                        </td>
+                        <td ng-class="{active: vm.$state.includes('investigador')}"   has-authority="ROLE_INVESTIGADOR">
+                            <a ui-sref="alumno-detail({id:tesis.alumno.id})"> {{tesis.alumno.nombre}}  
+                                {{tesis.alumno.apellido1}}  {{tesis.alumno.apellido2}}</a>
+                        </td>
+                        
                     
                     <!-- <td>
                         <a ui-sref="departamento-detail({id:tesis.departamento.id})">{{tesis.departamento.ndepartamento}}</a>

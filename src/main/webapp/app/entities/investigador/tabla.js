@@ -5,7 +5,7 @@
 //   });
 
 $(document).ready( function() {
-	$('#local').dynatable({
+	$('#example').dynatable({
 		table: {
 		  defaultColumnIdStyle: 'trimDash'
 		},
